@@ -7,11 +7,13 @@ body {
   margin: 0;
 }
 
+/* navbar */
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid whitesmoke;
+  border-bottom: .25px solid rgb(161 161 170);
   padding: 1rem 1.5rem;
   height: 50px;
 }
@@ -37,20 +39,128 @@ body {
 }
 
 .nav-link {
-  color: whitesmoke;
   text-decoration: none;
   padding: 0.5rem 0;
   transition: border-bottom 0.3s ease;
-  color: #fafafa;
+  color: rgb(161 161 170);
   cursor: pointer;
   font-style: normal;
   font-weight: bold;
 }
 
 .nav-link:hover {
-  border-bottom: 1px solid whitesmoke;
+  border-bottom: 1px solid rgb(161 161 170);
 }
 
 .nav-icon:hover {
   border-bottom: none;
+}
+
+
+
+
+/* hero */
+
+#hero {
+  padding: 5rem 2rem;
+}
+
+.container {
+  max-width: 70rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.firstBlock {
+  margin-top: 1.5rem;
+  width: 50vw;
+}
+
+.span{
+  display: inline-block;
+}
+
+.span-content{
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  
+  background-color: #fafafa;
+  color: #18181b;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  
+  border-radius: 9999px;
+}
+
+.heading {
+  font-size: 4.5rem;
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+.heading span{
+  color: #a1a1aa;
+}
+
+.text {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color: #a1a1aa;
+  max-width: 42rem;
+}
+
+
+.buttons-hero {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: 1rem;
+}
+
+.button-primary {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  
+  background-color: #fafafa;
+  color: #18181b;
+  border-radius: 0.5rem;
+  
+  transition-property: background-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.button-primary:hover {
+  background-color: #e4e4e7;
+}
+
+.button-secondary {
+  cursor: pointer;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  
+  border: 2px solid #fafafa;
+  color: #fafafa;
+  background-color: transparent;
+  border-radius: 0.5rem;
+
+  transition-property: background-color, color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.button-secondary:hover {
+  background-color: #fafafa;
+  color: #18181b;
 }

@@ -4,7 +4,7 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-brand">
-        <a>{"{{ Birko }}"}</a>
+        <a>{"{{ ABK }}"}</a>
       </div>
 
       <ul className="navbar-nav">
