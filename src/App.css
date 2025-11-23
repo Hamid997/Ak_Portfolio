@@ -8,14 +8,18 @@ body {
 }
 
 /* navbar */
-
 .navbar {
+  padding: 1rem 2rem;
+  border-bottom: 0.25px solid rgb(161 161 170);
+}
+
+.navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: .25px solid rgb(161 161 170);
-  padding: 1rem 1.5rem;
   height: 50px;
+  max-width: 82vw;
+  margin: auto;
 }
 
 .navbar-brand a {
@@ -56,9 +60,6 @@ body {
   border-bottom: none;
 }
 
-
-
-
 /* hero */
 
 #hero {
@@ -76,21 +77,21 @@ body {
   width: 50vw;
 }
 
-.span{
+.span {
   display: inline-block;
 }
 
-.span-content{
+.span-content {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
-  
+
   background-color: #fafafa;
   color: #18181b;
   font-size: 0.875rem;
   line-height: 1.25rem;
-  
+
   border-radius: 9999px;
 }
 
@@ -100,7 +101,7 @@ body {
   font-weight: 700;
 }
 
-.heading span{
+.heading span {
   color: #a1a1aa;
 }
 
@@ -110,7 +111,6 @@ body {
   color: #a1a1aa;
   max-width: 42rem;
 }
-
 
 .buttons-hero {
   display: flex;
@@ -124,16 +124,16 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  
+
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  
+
   background-color: #fafafa;
   color: #18181b;
   border-radius: 0.5rem;
-  
+
   transition-property: background-color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
@@ -149,7 +149,7 @@ body {
   padding-right: 1.5rem;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  
+
   border: 2px solid #fafafa;
   color: #fafafa;
   background-color: transparent;
@@ -163,4 +163,33 @@ body {
 .button-secondary:hover {
   background-color: #fafafa;
   color: #18181b;
+}
+
+/* About */
+
+.about {
+  padding: 5rem 2rem;
+  background-color: #27272a;
+}
+
+.about-container {
+  max-width: 70rem;
+  margin: 0 auto;
+}
+
+.about-title {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.description-container {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: #d4d4d8;
+}
+
+.about-p {
+  margin-bottom: 1rem;
 }
