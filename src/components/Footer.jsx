@@ -1,6 +1,5 @@
 import "../App.css";
 import { Github, Linkedin, Mail } from "lucide-react";
-import frontEndMentor from "../assets/frontEndMentor.svg";
 
 export default function Footer() {
   return (
@@ -23,9 +22,6 @@ export default function Footer() {
               </a>
               <a className="social-links">
                 <Mail size={25} />
-              </a>
-              <a className="social-links">
-                <img src={frontEndMentor} alt="" /> {{/* need edit */}}
               </a>
             </div>
           </div>
