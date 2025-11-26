@@ -194,8 +194,6 @@ body {
   margin-bottom: 1rem;
 }
 
-
-
 /* Skills */
 #skills {
   padding-top: 5rem;
@@ -232,7 +230,7 @@ body {
 
 @media (min-width: 768px) {
   #skills-block {
-    grid-template-columns: repeat(3, minmax(0, 1fr)); 
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -241,7 +239,7 @@ body {
   background-color: #27272a;
   border-radius: 1rem;
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  
+
   transition-property: box-shadow;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
@@ -265,7 +263,7 @@ body {
   margin-bottom: 1rem;
 }
 
-#items{
+#items {
   margin-top: 0.5rem;
 }
 
@@ -286,10 +284,6 @@ body {
   color: #d4d4d8;
 }
 
-
-
-
-
 /* Projects */
 #projects {
   padding-top: 5rem;
@@ -297,7 +291,6 @@ body {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   background-color: #27272a;
-
 }
 
 .projects-container {
@@ -330,12 +323,12 @@ body {
   display: flex;
   align-items: center;
   gap: 0.25rem;
-  
+
   font-size: 0.875rem;
   line-height: 1.25rem;
   font-weight: 500;
   color: #a1a1aa;
-  
+
   transition-property: color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
@@ -380,7 +373,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  
+
   transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
@@ -394,7 +387,7 @@ body {
   position: absolute;
   inset: 0;
   background-color: rgb(24 24 27 / 0);
-  
+
   transition-property: background-color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
@@ -409,7 +402,7 @@ body {
   line-height: 1.75rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
-  
+
   transition-property: color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
@@ -437,7 +430,7 @@ body {
   padding-right: 0.75rem;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
-  
+
   background-color: #27272a;
   color: #d4d4d8;
   font-size: 0.875rem;
@@ -445,15 +438,8 @@ body {
   border-radius: 9999px;
 }
 
-
-
-
-
-
-
-
-/* education*/
-#educations{
+/* educations-certifications */
+#educations-certifications {
   padding-top: 5rem;
   padding-bottom: 5rem;
   padding-left: 1.5rem;
@@ -467,28 +453,152 @@ body {
 }
 
 .eduTitle {
-  font-size: 1.875rem; /* text-3xl: 30px */
+  font-size: 1.875rem;
   line-height: 2.25rem;
-  font-weight: 700; /* font-bold */
-  margin-bottom: 3rem; /* mb-12: 3rem (48px) */
+  font-weight: 700;
+  margin-bottom: 3rem;
 }
 
 @media (min-width: 768px) {
   .eduTitle {
-    font-size: 2.25rem; /* md:text-4xl: 36px */
+    font-size: 2.25rem;
     line-height: 2.5rem;
   }
 }
 
+/* certifications */
 
+#certifications {
+  margin-bottom: 4rem;
+}
 
+.certifications-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.certifications-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #fafafa;
+}
+
+.certifications-title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+}
+
+.certifications-content {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .certifications-content {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.certification-card {
+  padding: 1rem;
+  background-color: #27272a;
+  border-radius: 0.5rem;
+
+  transition-property: box-shadow;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.certification-card:hover {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.certification-name {
+  font-weight: 600;
+  margin: 0.75rem 0;
+}
+
+.certification-description {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #a1a1aa;
+  margin: 0.75rem 0;
+}
+
+.certification-year {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: #71717a;
+  margin: 0.75rem 0;
+}
+
+/* education */
+
+.educations-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.educations-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #fafafa;
+}
+
+.educations-title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+}
+
+.educations-content>*+* {
+  margin-top: 1.5rem;
+}
+
+.education-card {
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border-left: 4px solid #fafafa;
+  background-color: #27272a;
+}
+
+.education-degree {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  margin: 0.75rem 0;
+}
+
+.education-institution {
+  color: #a1a1aa;
+  font-weight: 500;
+  margin: 0.75rem 0;
+}
+
+.education-year {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #71717a;
+  margin: 0.75rem 0;
+}
+
+.education-description {
+  color: #d4d4d8;
+  margin: 0.75rem 0;
+}
 
 
 
 
 
 /* contact*/
-#contact{
+#contact {
   padding-top: 5rem;
   padding-bottom: 5rem;
   padding-left: 1.5rem;
@@ -527,31 +637,6 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Footer */
 #footer {
@@ -608,9 +693,9 @@ body {
   gap: 1.5rem;
 }
 
-.social-links{
+.social-links {
   color: #a1a1aa;
-  
+
   transition-property: color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
@@ -623,9 +708,9 @@ body {
 .copyright {
   margin-top: 2rem;
   padding-top: 2rem;
-  
+
   border-top: 1px solid #3f3f46;
-  
+
   text-align: center;
   font-size: 0.875rem;
   line-height: 1.25rem;

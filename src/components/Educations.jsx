@@ -1,4 +1,5 @@
 import "../App.css";
+import { GraduationCap } from "lucide-react";
 
 export default function Educations() {
   const education = [
@@ -17,28 +18,25 @@ export default function Educations() {
     },
   ];
 
-  const certifications = [
-    {
-      name: "AWS Certified Solutions Architect",
-      issuer: "Amazon Web Services",
-      year: "2024",
-    },
-    { name: "Google UX Design Professional", issuer: "Google", year: "2023" },
-    { name: "Meta Front-End Developer", issuer: "Meta", year: "2023" },
-    {
-      name: "Advanced React Patterns",
-      issuer: "Frontend Masters",
-      year: "2022",
-    },
-  ];
-
   return (
     <>
-      <section id="educations">
-        <div className="edu-container">
-            <h2 className="eduTitle">Education & Certifications</h2>
+      <div id="educations">
+        <div className="educations-header">
+          <GraduationCap className="educations-icon" />
+          <h3 className="educations-title">Education</h3>
         </div>
-      </section>
+
+        <div className="educations-content">
+          {education.map((edu, idx) => (
+            <div key={idx} className="education-card">
+              <h4 className="education-degree">{edu.degree}</h4>
+              <p className="education-institution">{edu.institution}</p>
+              <p className="education-year">{edu.year}</p>
+              <p className="education-description">{edu.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
     </>
   );
 }
