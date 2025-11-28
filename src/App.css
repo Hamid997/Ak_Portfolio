@@ -22,12 +22,17 @@ body {
   margin: auto;
 }
 
-.navbar-brand a {
+.navbar-brand-logo {
   color: whitesmoke;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
   cursor: pointer;
+
+  font-family: "Philosopher", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+
 }
 
 .navbar-nav {
@@ -167,7 +172,7 @@ body {
 
 /* About */
 
-.about {
+#about {
   padding: 5rem 2rem;
   background-color: #27272a;
 }
