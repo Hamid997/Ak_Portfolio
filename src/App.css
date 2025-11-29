@@ -124,6 +124,12 @@ body {
   padding-top: 1rem;
 }
 
+.button-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
 .button-primary {
   cursor: pointer;
   display: flex;
@@ -136,7 +142,6 @@ body {
   padding-bottom: 0.75rem;
 
   background-color: #fafafa;
-  color: #18181b;
   border-radius: 0.5rem;
 
   transition-property: background-color;
@@ -145,7 +150,11 @@ body {
 }
 
 .button-primary:hover {
-  background-color: #e4e4e7;
+  background-color: #e3dfdf;
+}
+
+.button-link-primary{
+  color: #18181b;
 }
 
 .button-secondary {
@@ -156,7 +165,6 @@ body {
   padding-bottom: 0.75rem;
 
   border: 2px solid #fafafa;
-  color: #fafafa;
   background-color: transparent;
   border-radius: 0.5rem;
 
@@ -166,9 +174,37 @@ body {
 }
 
 .button-secondary:hover {
-  background-color: #fafafa;
-  color: #18181b;
+  background-color: #232323;
 }
+
+.button-link-secondary{
+  color: #fafafa;
+}
+
+/* TypewriterEffect */
+
+.typewriter-container {
+  /* Ensure the container is inline so the cursor sits next to the text */
+  display: inline;
+}
+
+.cursor {
+  /* Blinking animation */
+  animation: blink .7s steps(44) infinite normal;
+  display: inline-block;
+  margin-left: 3px;
+  color: inherit; /* Cursor color matches text color */
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 
 /* About */
 

@@ -1,4 +1,8 @@
 import "../App.css";
+import TypewriterEffect from "./TypewriterEffect";
+import { HashLink } from "react-router-hash-link";
+import { ArrowDownRight  } from 'lucide-react';
+
 
 export default function Hero() {
   return (
@@ -11,15 +15,23 @@ export default function Hero() {
             </div>
             <h1 className="heading">
               Hello, I'm a<br />
-              <span>Creative Developer</span>
+              <TypewriterEffect text="Creative Developer" delay={150} />
             </h1>
             <p className="text">
               I'm a front-end developer and designer focused on creating
               beautiful, functional web experiences that users love.
             </p>
             <div className="buttons-hero">
-              <button className="button-primary">View Projects</button>
-              <button className="button-secondary">Get in Touch</button>
+              <button className="button-primary">
+                <HashLink smooth to="/#projects" className="button-link button-link-primary" end>
+                  View Projects <ArrowDownRight  size={18} />
+                </HashLink>
+              </button>
+              <button className="button-secondary">
+                <HashLink smooth to="/#contact" className="button-link button-link-secondary" end>
+                  Get in Touch <ArrowDownRight  size={18} />
+                </HashLink>
+              </button>
             </div>
           </div>
           <div className="secondBlock"></div>
