@@ -67,7 +67,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <label className="form-label">Message</label>
-                <textarea rows="4" className="input-form" placeholder="Tell me about your project..."></textarea>
+                <textarea rows="6" className="input-form" placeholder="Tell me about your project..."></textarea>
                 </div>
                 <button className="form-button">
                   <Send size={18} />

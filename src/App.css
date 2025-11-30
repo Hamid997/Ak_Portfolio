@@ -293,7 +293,6 @@ body {
 .skill-icon {
   width: 2.5rem;
   height: 2.5rem;
-  margin-bottom: 1rem;
   color: #fafafa;
 }
 
@@ -810,6 +809,7 @@ body {
   transition-property: background-color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+  cursor : pointer;
 }
 
 .form-button:hover {
