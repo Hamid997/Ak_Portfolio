@@ -6,7 +6,7 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-brand">
-          <HashLink to="/" className="navbar-brand-logo" end>
+          <HashLink to="/" className="portfolio-logo" end>
             {"<Ak />"}
           </HashLink>
         </div>

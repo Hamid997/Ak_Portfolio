@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="footer-container">
           <div className="footer-main">
             <div className="contents-block">
-              <p className="title">Portfolio</p>
+              <p className="portfolio-logo">{"<Ak />"}</p>
               <p className="content">
                 Creating digital experiences that matter.
               </p>
