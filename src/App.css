@@ -459,6 +459,26 @@ body {
   line-height: 1.25rem;
 }
 
+.links-div{
+    display: flex;
+    flex-direction: row;
+    padding: .75rem 0;
+    gap: 4rem;
+}
+
+.repo-link, .demo-link{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+
+  padding: 0.25rem  0.75rem;
+  border: 2px solid #18181b;
+  color: #d4d4d8;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  border-radius: 9999px;
+}
+
 .project-stack {
   display: flex;
   flex-wrap: wrap;
@@ -471,7 +491,7 @@ body {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
 
-  background-color: #27272a;
+  background-color: #18181b;
   color: #d4d4d8;
   font-size: 0.875rem;
   line-height: 1.25rem;
