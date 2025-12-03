@@ -75,11 +75,12 @@ body {
   max-width: 70rem;
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  flex-direction: row;
 }
-
-.firstBlock {
-  margin-top: 1.5rem;
-  width: 50vw;
+.firstBlock{
+    margin-top: 1.5rem;
+    width: 70%;
 }
 
 .span {
@@ -204,6 +205,17 @@ body {
     opacity: 1;
   }
 }
+
+.secondBlock {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.secondBlock img {
+   width: 100%;
+}
+
 
 
 /* About */
@@ -594,6 +606,12 @@ body {
   line-height: 1rem;
   color: #71717a;
   margin: 0.75rem 0;
+}
+
+.certification-link{
+    color: #a1a1aa;
+    text-decoration: none;
+    padding-top: 1rem;
 }
 
 /* education */

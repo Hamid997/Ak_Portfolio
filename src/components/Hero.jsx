@@ -2,6 +2,8 @@ import "../App.css";
 import TypewriterEffect from "./TypewriterEffect";
 import { HashLink } from "react-router-hash-link";
 import { ArrowDownRight  } from 'lucide-react';
+import Freelancer from "../assets/Freelancer.svg";
+
 
 
 export default function Hero() {
@@ -34,7 +36,9 @@ export default function Hero() {
               </button>
             </div>
           </div>
-          <div className="secondBlock"></div>
+          <div className="secondBlock">
+                  <img src={Freelancer} alt="Your SVG" />
+          </div>
         </div>
       </section>
     </>
