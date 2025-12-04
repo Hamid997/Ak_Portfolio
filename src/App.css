@@ -72,15 +72,17 @@ body {
 }
 
 .container {
-  max-width: 70rem;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  flex-direction: row;
+    max-width: 70rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
 }
-.firstBlock{
+
+.firstBlock {
     margin-top: 1.5rem;
-    width: 70%;
+    width: 60%;
 }
 
 .span {
@@ -212,8 +214,9 @@ body {
     justify-content: center;
 }
 
-.secondBlock img {
-   width: 100%;
+.secondBlock img
+ {
+    width: auto;
 }
 
 

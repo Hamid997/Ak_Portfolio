@@ -2,7 +2,7 @@ import "../App.css";
 import TypewriterEffect from "./TypewriterEffect";
 import { HashLink } from "react-router-hash-link";
 import { ArrowDownRight  } from 'lucide-react';
-import Freelancer from "../assets/Freelancer.svg";
+import Freelancer from "../assets/Freelancer.png";
 
 
 
