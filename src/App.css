@@ -823,12 +823,18 @@ body {
     border: 1px solid #3f3f46;
     border-radius: 0.5rem;
     outline: none;
+    color:#fafafa;
 }
 
 .input-form:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
   box-shadow: 0 0 0 2px #fafafa;
+}
+
+.form-error {
+    color: #c75555;
+    margin: .3rem 0 0 0;
 }
 
 .form-button {
