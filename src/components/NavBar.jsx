@@ -1,7 +1,13 @@
 import "../App.css";
-import { HashLink } from 'react-router-hash-link'; 
+import { useState } from "react";
+import { HashLink } from "react-router-hash-link";
+import { Menu, X } from "lucide-react";
 
 function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const Navigation = ["About", "Skills", "Projects", "Educations", "Contact"];
+
   return (
     <nav className="navbar">
       <div className="navbar-container">
@@ -11,34 +17,50 @@ function Navbar() {
           </HashLink>
         </div>
 
+        {/* Desktop Navigation */}
         <ul className="navbar-nav">
-          <li className="nav-item">
-            <HashLink smooth to="/#about" className="nav-link" end>
-              About
-            </HashLink>
-          </li>{" "}
-          <li className="nav-item">
-            <HashLink smooth to="/#skills" className="nav-link" end>
-              Skills
-            </HashLink>
-          </li>{" "}
-          <li className="nav-item">
-            <HashLink smooth to="/#educations-certifications" className="nav-link" end>
-              Education
-            </HashLink>
-          </li>{" "}
-          <li className="nav-item">
-            <HashLink smooth to="/#projects" className="nav-link" end>
-              Projects
-            </HashLink>
-          </li>{" "}
-          <li className="nav-item">
-            <HashLink smooth to="/#contact" className="nav-link" end>
-              Contact
-            </HashLink>
-          </li>{" "}
+          {Navigation.map(
+            (item) => (
+              <li
+                key={item}
+                className="nav-item"
+              >
+                <HashLink smooth to={`/#${item}`} className="nav-link" end>
+                  {item}
+                </HashLink>
+              </li>
+            )
+          )}
         </ul>
+
+        {/* Mobile Navigation */}
+        <div className="mobile-menu-button-div">
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="mobile-menu-button"
+          >
+            {isMenuOpen ? <X size={32} /> : <Menu size={32} />}
+          </button>
+        </div>
       </div>
+
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <ul className="navbar-nav-mobile">
+          {Navigation.map(
+            (item) => (
+              <li
+                key={item}
+                className="nav-item-mobile"
+              >
+                <HashLink smooth to={`/#${item}`} className="nav-link" end>
+                  {item}
+                </HashLink>
+              </li>
+            )
+          )}
+        </ul>
+      )}
     </nav>
   );
 }

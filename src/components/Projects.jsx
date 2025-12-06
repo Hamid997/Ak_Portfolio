@@ -67,7 +67,7 @@ export default function Projects() {
 
   return (
     <>
-      <section id="projects">
+      <section id="Projects">
         <div className="projects-container">
           <div className="projects-header">
             <h2 className="projects-title">Featured Projects</h2>

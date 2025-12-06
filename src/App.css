@@ -7,6 +7,13 @@ body {
   margin: 0;
 }
 
+
+
+
+
+
+
+
 /* navbar */
 .navbar {
   padding: 1rem 2rem;
@@ -32,7 +39,6 @@ body {
   font-family: "Philosopher", sans-serif;
   font-weight: 700;
   font-style: normal;
-
 }
 
 .navbar-nav {
@@ -65,6 +71,77 @@ body {
   border-bottom: none;
 }
 
+@media (max-width: 750px) {
+  .navbar-nav {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .navbar-nav {
+    display: none;
+  }
+}
+
+.mobile-menu-button-div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media (min-width: 651px) {
+  .mobile-menu-button-div {
+    display: none;
+  }
+}
+
+.mobile-menu-button {
+  padding: 0.5rem;
+  color: #f4f4f5;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.navbar-nav-mobile {
+    margin: 1.5rem 0 .5rem 0;
+    padding: 0;
+}
+
+@media (min-width: 651px) {
+  .navbar-nav-mobile {
+    display: none;
+  }
+}
+
+.navbar-nav-mobile > * + * {
+  margin-top: 0.75rem; /* space-y-3: 0.75rem (12px) */
+}
+
+.nav-item-mobile {
+  display: block;
+  width: 100%; /* w-full */
+  text-align: center; /* text-left */
+  padding-left: 1rem; /* px-4: 1rem (16px) */
+  padding-right: 1rem;
+  padding-top: 0.5rem; /* py-2: 0.5rem (8px) */
+  padding-bottom: 0.5rem;
+  
+  font-size: 1rem; /* text-sm: 14px */
+  line-height: 1.25rem;
+  font-weight: 500; /* font-medium */
+  color: #52525b; /* text-zinc-600 */
+}
+
+
+
+
+
+
+
+
+
+
 /* hero */
 
 #hero {
@@ -72,17 +149,17 @@ body {
 }
 
 .container {
-    max-width: 70rem;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-direction: row;
-    gap: 10%;
+  max-width: 70rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  gap: 10%;
 }
 
 .firstBlock {
-    margin-top: 1.5rem;
-    width: 60%;
+  margin-top: 1.5rem;
+  width: 60%;
 }
 
 .span {
@@ -128,9 +205,9 @@ body {
 }
 
 .button-link {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 
 .button-primary {
@@ -156,7 +233,7 @@ body {
   background-color: #e3dfdf;
 }
 
-.button-link-primary{
+.button-link-primary {
   color: #18181b;
 }
 
@@ -180,7 +257,7 @@ body {
   background-color: #232323;
 }
 
-.button-link-secondary{
+.button-link-secondary {
   color: #fafafa;
 }
 
@@ -193,7 +270,7 @@ body {
 
 .cursor {
   /* Blinking animation */
-  animation: blink .7s steps(44) infinite normal;
+  animation: blink 0.7s steps(44) infinite normal;
   display: inline-block;
   margin-left: 3px;
   color: inherit; /* Cursor color matches text color */
@@ -209,21 +286,37 @@ body {
 }
 
 .secondBlock {
-    width: 30%;
-    display: flex;
-    justify-content: center;
+  width: 30%;
+  display: flex;
+  justify-content: center;
 }
 
-.secondBlock img
- {
-    width: auto;
+.secondBlock img {
+  width: auto;
 }
+
+@media(max-width: 750px){
+  .secondBlock{
+    display: none;
+  }
+  .firstBlock{
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
 
 
 
 /* About */
 
-#about {
+#About {
   padding: 5rem 2rem;
   background-color: #27272a;
 }
@@ -250,8 +343,14 @@ body {
   margin-bottom: 1rem;
 }
 
+
+
+
+
+
+
 /* Skills */
-#skills {
+#Skills {
   padding-top: 5rem;
   padding-bottom: 5rem;
   padding-left: 1.5rem;
@@ -339,8 +438,17 @@ body {
   color: #d4d4d8;
 }
 
+
+
+
+
+
+
+
+
+
 /* Projects */
-#projects {
+#Projects {
   padding-top: 5rem;
   padding-bottom: 5rem;
   padding-left: 1.5rem;
@@ -474,19 +582,20 @@ body {
   line-height: 1.25rem;
 }
 
-.links-div{
-    display: flex;
-    flex-direction: row;
-    padding: .75rem 0;
-    gap: 4rem;
+.links-div {
+  display: flex;
+  flex-direction: row;
+  padding: 0.75rem 0;
+  gap: 4rem;
 }
 
-.repo-link, .demo-link{
+.repo-link,
+.demo-link {
   display: flex;
   align-items: center;
   text-decoration: none;
 
-  padding: 0.25rem  0.75rem;
+  padding: 0.25rem 0.75rem;
   border: 2px solid #18181b;
   color: #d4d4d8;
   font-size: 0.875rem;
@@ -513,6 +622,16 @@ body {
   border-radius: 9999px;
 }
 
+
+
+
+
+
+
+
+
+
+
 /* educations-certifications */
 #educations-certifications {
   padding-top: 5rem;
@@ -522,9 +641,10 @@ body {
 }
 
 .edu-container {
-  max-width: 72rem;
-  margin-left: auto;
-  margin-right: auto;
+    max-width: 72rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 2rem;
 }
 
 .eduTitle {
@@ -611,10 +731,10 @@ body {
   margin: 0.75rem 0;
 }
 
-.certification-link{
-    color: #a1a1aa;
-    text-decoration: none;
-    padding-top: 1rem;
+.certification-link {
+  color: #a1a1aa;
+  text-decoration: none;
+  padding-top: 1rem;
 }
 
 /* education */
@@ -674,8 +794,17 @@ body {
   margin: 0.75rem 0;
 }
 
+
+
+
+
+
+
+
+
+
 /* contact*/
-#contact {
+#Contact {
   padding-top: 5rem;
   padding-bottom: 5rem;
   padding-left: 1.5rem;
@@ -723,7 +852,7 @@ body {
 
 @media (min-width: 768px) {
   .contact-section {
-    grid-template-columns: repeat(2, minmax(0, 1fr)); 
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -778,11 +907,6 @@ body {
   color: #fafafa;
 }
 
-
-
-
-
-
 .contact-form {
   padding: 2rem;
   background-color: #18181b;
@@ -814,16 +938,16 @@ body {
 }
 
 .input-form {
-    width: 93%;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    background-color: #27272a;
-    border: 1px solid #3f3f46;
-    border-radius: 0.5rem;
-    outline: none;
-    color:#fafafa;
+  width: 93%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: #27272a;
+  border: 1px solid #3f3f46;
+  border-radius: 0.5rem;
+  outline: none;
+  color: #fafafa;
 }
 
 .input-form:focus {
@@ -833,8 +957,8 @@ body {
 }
 
 .form-error {
-    color: #c75555;
-    margin: .3rem 0 0 0;
+  color: #c75555;
+  margin: 0.3rem 0 0 0;
 }
 
 .form-button {
@@ -842,29 +966,26 @@ body {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  
+
   width: 100%;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  
+
   background-color: #fafafa;
   color: #18181b;
   border-radius: 0.5rem;
-  
+
   transition-property: background-color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
-  cursor : pointer;
+  cursor: pointer;
 }
 
 .form-button:hover {
   background-color: #e4e4e7;
 }
-
-
-
 
 
 
