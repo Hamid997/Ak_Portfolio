@@ -219,6 +219,7 @@ body {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 
+  border: 1px solid #fafafa;
   background-color: #fafafa;
   border-radius: 0.5rem;
 
@@ -242,7 +243,7 @@ body {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 
-  border: 2px solid #fafafa;
+  border: 1px solid #fafafa;
   background-color: transparent;
   border-radius: 0.5rem;
 
@@ -701,27 +702,45 @@ body {
 
 .certification-name {
   font-weight: 600;
-  margin: 0.75rem 0;
+  margin: 0.5rem 0;
+}
+
+.certification-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .certification-description {
   font-size: 0.875rem;
   line-height: 1.25rem;
   color: #a1a1aa;
-  margin: 0.75rem 0;
+  margin: 0.5rem 0;
 }
 
 .certification-year {
   font-size: 0.75rem;
   line-height: 1rem;
   color: #71717a;
-  margin: 0.75rem 0;
+  margin: 0.5rem 0;
 }
 
 .certification-link {
   color: #a1a1aa;
   text-decoration: none;
-  padding-top: 1rem;
+  display: block;
+  margin: 0.5rem 0;
+  width: fit-content;
+}
+
+.certification-img {
+    width: 20%;
+    display: flex;
+    align-items: center;
+}
+
+.certification-img img{
+    width: -webkit-fill-available;
 }
 
 /* education */
