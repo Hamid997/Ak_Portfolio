@@ -25,12 +25,12 @@ export default function Hero() {
             </p>
             <div className="buttons-hero">
               <button className="button-primary">
-                <HashLink smooth to="/#projects" className="button-link button-link-primary" end>
+                <HashLink smooth to="/#Projects" className="button-link button-link-primary" end>
                   View Projects <ArrowDownRight  size={18} />
                 </HashLink>
               </button>
               <button className="button-secondary">
-                <HashLink smooth to="/#contact" className="button-link button-link-secondary" end>
+                <HashLink smooth to="/#Contact" className="button-link button-link-secondary" end>
                   Get in Touch <ArrowDownRight  size={18} />
                 </HashLink>
               </button>

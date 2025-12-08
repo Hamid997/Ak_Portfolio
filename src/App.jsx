@@ -7,6 +7,7 @@ import Projects from "./components/Projects";
 import Learnings from "./components/Learnings";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import GoToTop from "./components/GoToTop";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Learnings />
       <Contact />
       <Footer />
+      <GoToTop />
     </>
   );
 }
