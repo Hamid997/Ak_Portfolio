@@ -4,17 +4,17 @@ import { GraduationCap } from "lucide-react";
 export default function Educations() {
   const education = [
     {
-      degree: "Master of Computer Science",
-      institution: "Stanford University",
-      year: "2020 - 2022",
-      description:
-        "Specialized in Human-Computer Interaction and Web Technologies",
+      degree: "Bachelor of Science degree in Earth and Universe Sciences",
+      institution: "Faculty of Sciences , Ibn Zohr University",
+      year: "2014 - 2017",
+      description: "Option: Water resources",
     },
     {
-      degree: "Bachelor of Science in Software Engineering",
-      institution: "MIT",
-      year: "2016 - 2020",
-      description: "Focus on Full-Stack Development and UI Design",
+      degree: "Baccalaureate in Experimental Sciences",
+      institution: "Anoual High School",
+      year: "2014",
+      description:
+        "Option: Biology and Earth Sciences",
     },
   ];
 

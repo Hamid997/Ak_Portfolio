@@ -1,68 +1,117 @@
 import "../App.css";
 import { ArrowUpRight } from "lucide-react";
 
+import Countries from "../assets/projects/MRLzwnZj.jpg";
+import IP from "../assets/projects/R815wQEh.jpg";
+import Shortening from "../assets/projects/Pyu_3ou-.jpg";
+import Advices from "../assets/projects/cCW0sG6g.jpg";
+import Blogr from '../assets/projects/Um1LxInU.jpg';
+import Insure from '../assets/projects/empVuIiM.jpg';
+import Sunnyside from '../assets/projects/jRMEmsfb.jpg';
+import Fylo from '../assets/projects/GR02jIrR.jpg';
+import Clipboard from '../assets/projects/UbcicZGP.jpg';
+import Ping from '../assets/projects/TK_hWCaC.jpg';
+import Apparel from '../assets/projects/HdNlU8Gt.jpg';
+import Intro from '../assets/projects/mkTLs1ar.jpg'
+
 export default function Projects() {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description:
-        "A full-stack e-commerce solution with real-time inventory management and payment processing.",
-      tags: ["React", "Node.js", "MongoDB", "Stripe"],
-      image:
-        "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop",
-      repo: "#",
-      demo: "#",
+      title: "REST Countries API web app",
+      description: "A full-stack e-commerce solution with real-time inventory management and payment processing.",
+      tags: ["React", "Vite", "CSS" , "JSON"],
+      image: Countries,
+      repo: "https://github.com/Hamid997/REST-Countries-API-with-color-theme-switcher",
+      demo: "https://rest-countries-api-with-color-theme-switcher-dun-six.vercel.app/",
     },
     {
-      title: "AI Task Manager",
-      description:
-        "Smart task management app with AI-powered prioritization and scheduling recommendations.",
-      tags: ["Next.js", "TypeScript", "OpenAI", "PostgreSQL"],
-      image:
-        "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&h=600&fit=crop",
-      repo: "#",
-      demo: "#",
+      title: "IP Address Tracker",
+      description: "A full-stack e-commerce solution with real-time inventory management and payment processing.",
+      tags: ["React", "Axios", "Leaflet js", "Vite", "CSS"],
+      image: IP,
+      repo: "https://github.com/Hamid997/IP-Address-Tracker",
+      demo: "https://ip-address-tracker-dusky-six.vercel.app",
     },
     {
-      title: "Design System",
-      description:
-        "Comprehensive UI component library with accessibility features and dark mode support.",
-      tags: ["React", "Tailwind", "Storybook", "Figma"],
-      image:
-        "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=600&fit=crop",
-      repo: "#",
-      demo: "#",
+      title: "URL shortening API landing page",
+      description: "A full-stack e-commerce solution with real-time inventory management and payment processing.",
+      tags: [ "React", "Vite" , "CSS"],
+      image: Shortening,
+      repo: "https://github.com/Hamid997/URL-shortening-API-landing-page",
+      demo: "https://url-shortening-api-landing-page-theta.vercel.app/",
     },
     {
-      title: "Analytics Dashboard",
-      description:
-        "Real-time analytics platform with interactive charts and customizable metrics.",
-      tags: ["Vue.js", "D3.js", "Firebase", "Charts"],
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
-      repo: "#",
-      demo: "#",
+      title: "Advice generator app",
+      description: "A full-stack e-commerce solution with real-time inventory management and payment processing.",
+      tags: ["React", "Vite", "Axios" , "CSS"],
+      image: Advices,
+      repo: "https://github.com/Hamid997/Advice-generator-app",
+      demo: "https://advice-generator-app-ten-omega.vercel.app/",
     },
     {
-      title: "Mobile Banking App",
-      description:
-        "Secure mobile banking solution with biometric authentication and instant transfers.",
-      tags: ["React Native", "Redux", "Node.js", "AWS"],
-      image:
-        "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=600&fit=crop",
-      repo: "#",
-      demo: "#",
+      title: "Blogr landing page",
+      description: "A full-stack e-commerce solution with real-time inventory management and payment processing.",
+      tags: ["HTML", "CSS" , "Javascript"],
+      image: Blogr,
+      repo: "https://github.com/Hamid997/Blogr-landing-page",
+      demo: "https://hamid997.github.io/Blogr-landing-page/",
     },
     {
-      title: "Social Media Platform",
-      description:
-        "Real-time social networking platform with messaging, stories, and content sharing.",
-      tags: ["Next.js", "Socket.io", "MongoDB", "Redis"],
-      image:
-        "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop",
-      repo: "#",
-      demo: "#",
+      title: "Insure landing page",
+      description: "A full-stack e-commerce solution with real-time inventory management and payment processing.",
+      tags: ["HTML", "CSS" , "Javascript"],
+      image: Insure,
+      repo: "https://github.com/Hamid997/Insure-landing-page",
+      demo: "https://hamid997.github.io/Insure-landing-page/",
     },
+    {
+      title: "Sunnyside agency landing page",
+      description: "A full-stack e-commerce solution with real-time inventory management and payment processing.",
+      tags: ["HTML", "CSS" , "Javascript"],
+      image: Sunnyside,
+      repo: "https://github.com/Hamid997/Sunnyside-agency-landing-page",
+      demo: "https://hamid997.github.io/Sunnyside-agency-landing-page/",
+    },
+    {
+      title: "Fylo landing page",
+      description: "A full-stack e-commerce solution with real-time inventory management and payment processing.",
+      tags: ["HTML", "CSS" , "Javascript"],
+      image: Fylo,
+      repo: "https://github.com/Hamid997/Fylo-landing-page-with-two-column-layout",
+      demo: "https://hamid997.github.io/Fylo-landing-page-with-two-column-layout/",
+    },    
+    {
+      title: "Clipboard landing page",
+      description: "A full-stack e-commerce solution with real-time inventory management and payment processing.",
+      tags: ["HTML", "CSS"],
+      image: Clipboard,
+      repo: "https://github.com/Hamid997/Clipboard-landing-page",
+      demo: "https://hamid997.github.io/Clipboard-landing-page/",
+    },
+    {
+      title: "Ping coming soon page",
+      description: "A full-stack e-commerce solution with real-time inventory management and payment processing.",
+      tags: ["HTML", "CSS"],
+      image: Ping,
+      repo: "https://github.com/Hamid997/Ping-single-column-coming-soon-page",
+      demo: "https://github.com/Hamid997/Ping-single-column-coming-soon-page/deployments/github-pagesv",
+    },
+    {
+      title: "Base Apparel coming soon page",
+      description: "A full-stack e-commerce solution with real-time inventory management and payment processing.",
+      tags: ["HTML", "CSS" , "Javascript"],
+      image: Apparel,
+      repo: "https://github.com/Hamid997/Base-Apparel-coming-soon-page",
+      demo: "https://hamid997.github.io/Base-Apparel-coming-soon-page/",
+    },
+    {
+      title: "Intro component with sign-up form",
+      description: "A full-stack e-commerce solution with real-time inventory management and payment processing.",
+      tags: ["HTML", "CSS" , "Javascript"],
+      image: Intro,
+      repo: "https://github.com/Hamid997/Intro-component-with-sign-up-form",
+      demo: "https://hamid997.github.io/Intro-component-with-sign-up-form/",
+    }
   ];
 
   return (

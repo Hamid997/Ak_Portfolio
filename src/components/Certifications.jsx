@@ -1,59 +1,128 @@
 import "../App.css";
 import { Award, ArrowUpRight } from "lucide-react";
-import Meta from '../assets/meta.png'
-import IBM from '../assets/ibm.png'
+
+import Meta from '../assets/learnings/meta.png'
+import IBM from '../assets/learnings/ibm.png'
+import Michigan from '../assets/learnings/michigan.png'
+import HKUST from '../assets/learnings/HKUST.png'
+import Stanford from '../assets/learnings/Stanford.png'
+import LinkedIn from '../assets/learnings/linkedin.png'
+import Udemy from '../assets/learnings/Udemy.png'
 
 export default function Certifications() {
 
   const certifications = [
     {
-      name: "IBM Full Stack Software Developer Specialization",
-      issuer: "IBM - Coursera",
-      year: "2023",
+      name: "Machine Learning Specialization",
+      issuer: "Stanford University & DeepLearning.AI - Coursera",
+      year: "2024",
       link: "#",
-      img: IBM
+      img: Stanford
     },
     {
-      name: "IBM Back-End Development Specialization",
-      issuer: "IBM - Coursera",
-      year: "2023",
+      name: "Algorithms Specialization",
+      issuer: "Stanford University - Coursera",
+      year: "2024",
       link: "#",
-      img: IBM
+      img: Stanford
     },
     {
-      name: "Meta Front-End Developer",
-      issuer: "Meta - Coursera",
-      year: "2023",
-      link: "#",
-      img: Meta
-    },
-    {
-      name: "Meta Back-End Developer",
+      name: "Meta Back-End Developer Professional Certificate",
       issuer: "Meta - Coursera",
       year: "2024",
       link: "#",
       img: Meta
     },
     {
-      name: "Advanced React Patterns",
-      issuer: "Frontend Masters",
+      name: "Meta Front-End Developer Professional Certificate",
+      issuer: "Meta - Coursera",
+      year: "2023",
+      link: "#",
+      img: Meta
+    },
+    {
+      name: "IBM Full Stack Software Developer Professional Certificate",
+      issuer: "IBM - Coursera",
+      year: "2023",
+      link: "#",
+      img: IBM
+    },
+    {
+      name: "IBM Back-End Development Professional Certificate",
+      issuer: "IBM - Coursera",
+      year: "2023",
+      link: "#",
+      img: IBM
+    },   
+    {
+      name: "IBM Applied DevOps Engineering Professional Certificate",
+      issuer: "IBM - Coursera",
+      year: "2023",
+      link: "#",
+      img: IBM
+    },    
+    {
+      name: "IBM DevOps, Cloud, and Agile Foundations Specialization",
+      issuer: "IBM - Coursera",
+      year: "2023",
+      link: "#",
+      img: IBM
+    },    
+    {
+      name: "IBM DevOps and Software Engineering Professional Certificate",
+      issuer: "IBM - Coursera",
+      year: "2023",
+      link: "#",
+      img: IBM
+    },    
+    {
+      name: "IBM Applied Software Engineering Fundamentals Specialization",
+      issuer: "IBM - Coursera",
+      year: "2023",
+      link: "#",
+      img: IBM
+    },   
+    {
+      name: "The Web Developer Bootcamp 2022",
+      issuer: "Udemy - Colt Steele",
       year: "2022",
       link: "#",
-      img: ''
+      img: Udemy
     },
     {
-      name: "AWS Certified Solutions Architect",
-      issuer: "Amazon Web Services",
-      year: "2024",
+      name: "IBM Cloud Application Development Foundations Specialization",
+      issuer: "IBM - Coursera",
+      year: "2022",
       link: "#",
-      img: ''
+      img: IBM,
     },
     {
-      name: "Google UX Design Professional",
-      issuer: "Google",
-      year: "2023",
+      name: "Full-Stack Web Development with React Specialization",
+      issuer: "The Hong Kong University of Science and Technology - Coursera",
+      year: "2022",
       link: "#",
-      img: ''
+      img: HKUST
+    }, 
+    {
+      name: "Become a Software Developer",
+      issuer: "LinkedIn Learning",
+      year: "2020 - 2021",
+      link: "#",
+      img: LinkedIn
+    },
+    {
+      name: "Web Applications for Everybody Specialization",
+      issuer: "University of Michigan - Coursera",
+      year: "2020 - 2022",
+      link: "#",
+      img: Michigan
+    },
+    {
+      name: "Web Design for Everybody Specialization",
+      issuer: "University of Michigan - Coursera",
+      year: "2019 - 2022",
+      link: "#",
+      img: Michigan
     }
   ];
 
