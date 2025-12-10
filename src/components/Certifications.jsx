@@ -8,6 +8,14 @@ import HKUST from '../assets/learnings/HKUST.png'
 import Stanford from '../assets/learnings/Stanford.png'
 import LinkedIn from '../assets/learnings/linkedin.png'
 import Udemy from '../assets/learnings/Udemy.png'
+import JHU from '../assets/learnings/JHU.png'
+import Minnesota from '../assets/learnings/minnesota.png'
+import Toronto from '../assets/learnings/toronto.png'
+import UCDavis from '../assets/learnings/ucdavis.png'
+import Yonsei from '../assets/learnings/yonsei.png'
+import Australia from '../assets/learnings/Australia.png'
+import NASA from '../assets/learnings/nasa.png'
+import Google from '../assets/learnings/google.png'
 
 export default function Certifications() {
 
@@ -39,6 +47,13 @@ export default function Certifications() {
       year: "2023",
       link: "#",
       img: Meta
+    },
+    {
+      name: "Intermediate Web and Front-End Development",
+      issuer: "IBM - Coursera",
+      year: "2023",
+      link: "#",
+      img: IBM
     },
     {
       name: "IBM Full Stack Software Developer Professional Certificate",
@@ -111,6 +126,13 @@ export default function Certifications() {
       img: LinkedIn
     },
     {
+      name: "HTML, CSS, and Javascript for Web Developers Course",
+      issuer: "Johns Hopkins University - Coursera",
+      year: "2020",
+      link: "#",
+      img: JHU,
+    },
+    {
       name: "Web Applications for Everybody Specialization",
       issuer: "University of Michigan - Coursera",
       year: "2020 - 2022",
@@ -126,12 +148,99 @@ export default function Certifications() {
     }
   ];
 
+  const others = [  
+    {
+      name: "Fundamentals of Remote Sensing",
+      issuer: "NASA - ARSET",
+      year: "2025",
+      link: "#",
+      img: NASA,
+    }, 
+    {
+      name: "QGIS Mega Course: GIS and Remote Sensing- Beginner to Expert",
+      issuer: "Udemy",
+      year: "2025",
+      link: "#",
+      img: Udemy,
+    }, 
+    {
+      name: "Remote Sensing Image Acquisition, Analysis and Applications",
+      issuer: "UNSW Sydney & IEEE GRSS - Coursera",
+      year: "2023",
+      link: "#",
+      img: Australia,
+    },    
+    {
+      name: "Spatial Data Science and Applications",
+      issuer: "Yonsei University - Coursera",
+      year: "2022",
+      link: "#",
+      img: Yonsei,
+    },
+    {
+      name: "Learn User Experience Design from A-Z: Adobe XD UI UX Design",
+      issuer: "Udemy",
+      year: "2021",
+      link: "#",
+      img: Udemy,
+    },  
+    {
+      name: "Introduction to GIS Mapping",
+      issuer: "University of Toronto - Coursera",
+      year: "2021",
+      link: "#",
+      img: Toronto,
+    },
+    {
+      name: "Geospatial and Environmental Analysis",
+      issuer: "University of California, Davis - Coursera",
+      year: "2021",
+      link: "#",
+      img: UCDavis,
+    },
+    {
+      name: "GIS Data Formats, Design and Quality",
+      issuer: "University of California, Davis - Coursera",
+      year: "2021",
+      link: "#",
+      img: UCDavis,
+    },
+    {
+      name: "Fundamentals of GIS",
+      issuer: "University of California, Davis - Coursera",
+      year: "2021",
+      link: "#",
+      img: UCDavis,
+    },
+    {
+      name: "UI/UX with Adobe XD",
+      issuer: "Udemy",
+      year: "2020",
+      link: "#",
+      img: Udemy,
+    },
+    {
+      name: "Introduction to UI Design",
+      issuer: "University of Minnesota - Coursera",
+      year: "2019",
+      link: "#",
+      img: Minnesota,
+    },
+    {
+      name: "The Fundamentals of Digital Marketing",
+      issuer: "Google Digital Garage",
+      year: "2019",
+      link: "#",
+      img: Google,
+    }, 
+  ]
+
   return (
     <>
       <div id="certifications">
         <div className="certifications-header">
           <Award className="certifications-icon" />
-          <h3 className="certifications-titl">Certifications</h3>
+          <h3 className="certifications-title">Certifications</h3>
         </div>
 
         <div className="certifications-content">
@@ -152,6 +261,35 @@ export default function Certifications() {
                 </div>
                 <div className="certification-img">
                   <img src={cert.img} alt="" />
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="certifications-header">
+          <Award className="certifications-icon" />
+          <h3 className="certifications-title">Others</h3>
+        </div>
+
+        <div className="certifications-content">
+          {others.map((oth, idx) => (
+            <div key={idx} className="certification-card">
+              <h4 className="certification-name">{oth.name}</h4>
+              <div className="certification-details">
+                <div className="certification-content">
+                  <p className="certification-description">{oth.issuer}</p>
+                  <p className="certification-year">{oth.year}</p>
+                  <a
+                    href={oth.link}
+                    className="certification-link"
+                    target="_blank"
+                  >
+                    Link <ArrowUpRight size={16} />
+                  </a>
+                </div>
+                <div className="certification-img">
+                  <img src={oth.img} alt="" />
                 </div>
               </div>
             </div>
