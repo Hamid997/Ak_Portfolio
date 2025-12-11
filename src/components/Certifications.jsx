@@ -1,5 +1,6 @@
 import "../App.css";
 import { Award, ArrowUpRight } from "lucide-react";
+import { useState } from "react";
 
 import Meta from '../assets/learnings/meta.png'
 import IBM from '../assets/learnings/ibm.png'
@@ -49,13 +50,6 @@ export default function Certifications() {
       img: Meta
     },
     {
-      name: "Intermediate Web and Front-End Development",
-      issuer: "IBM - Coursera",
-      year: "2023",
-      link: "#",
-      img: IBM
-    },
-    {
       name: "IBM Full Stack Software Developer Professional Certificate",
       issuer: "IBM - Coursera",
       year: "2023",
@@ -75,14 +69,7 @@ export default function Certifications() {
       year: "2023",
       link: "#",
       img: IBM
-    },    
-    {
-      name: "IBM DevOps, Cloud, and Agile Foundations Specialization",
-      issuer: "IBM - Coursera",
-      year: "2023",
-      link: "#",
-      img: IBM
-    },    
+    }, 
     {
       name: "IBM DevOps and Software Engineering Professional Certificate",
       issuer: "IBM - Coursera",
@@ -90,6 +77,20 @@ export default function Certifications() {
       link: "#",
       img: IBM
     },    
+    {
+      name: "Intermediate Web and Front-End Development",
+      issuer: "IBM - Coursera",
+      year: "2023",
+      link: "#",
+      img: IBM
+    },
+    {
+      name: "IBM DevOps, Cloud, and Agile Foundations Specialization",
+      issuer: "IBM - Coursera",
+      year: "2023",
+      link: "#",
+      img: IBM
+    },       
     {
       name: "IBM Applied Software Engineering Fundamentals Specialization",
       issuer: "IBM - Coursera",
@@ -145,10 +146,7 @@ export default function Certifications() {
       year: "2019 - 2022",
       link: "#",
       img: Michigan
-    }
-  ];
-
-  const others = [  
+    },
     {
       name: "Fundamentals of Remote Sensing",
       issuer: "NASA - ARSET",
@@ -235,6 +233,18 @@ export default function Certifications() {
     }, 
   ]
 
+  const [visibleItemCount, setVisibleItemCount] = useState(8);
+
+  const displayedDataCertifications = certifications.slice(0, visibleItemCount);
+
+  const handleLoadMore = () => {
+    if (visibleItemCount >= certifications.length) {
+      setVisibleItemCount(8); // Show Less
+    } else {
+      setVisibleItemCount((prev) => prev + 4); // Load More
+    }
+  };
+
   return (
     <>
       <div id="certifications">
@@ -244,15 +254,15 @@ export default function Certifications() {
         </div>
 
         <div className="certifications-content">
-          {certifications.map((cert, idx) => (
+          {displayedDataCertifications.map((certification, idx) => (
             <div key={idx} className="certification-card">
-              <h4 className="certification-name">{cert.name}</h4>
+              <h4 className="certification-name">{certification.name}</h4>
               <div className="certification-details">
                 <div className="certification-content">
-                  <p className="certification-description">{cert.issuer}</p>
-                  <p className="certification-year">{cert.year}</p>
+                  <p className="certification-description">{certification.issuer}</p>
+                  <p className="certification-year">{certification.year}</p>
                   <a
-                    href={cert.link}
+                    href={certification.link}
                     className="certification-link"
                     target="_blank"
                   >
@@ -260,41 +270,18 @@ export default function Certifications() {
                   </a>
                 </div>
                 <div className="certification-img">
-                  <img src={cert.img} alt="" />
+                  <img src={certification.img} alt="" />
                 </div>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="certifications-header">
-          <Award className="certifications-icon" />
-          <h3 className="certifications-title">Others</h3>
-        </div>
-
-        <div className="certifications-content">
-          {others.map((oth, idx) => (
-            <div key={idx} className="certification-card">
-              <h4 className="certification-name">{oth.name}</h4>
-              <div className="certification-details">
-                <div className="certification-content">
-                  <p className="certification-description">{oth.issuer}</p>
-                  <p className="certification-year">{oth.year}</p>
-                  <a
-                    href={oth.link}
-                    className="certification-link"
-                    target="_blank"
-                  >
-                    Link <ArrowUpRight size={16} />
-                  </a>
-                </div>
-                <div className="certification-img">
-                  <img src={oth.img} alt="" />
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+        <div className="load-button-div">
+            <button onClick={handleLoadMore} className="load-button">
+              {visibleItemCount >= certifications.length ? "Show Less" : "Load More"}
+            </button>
+          </div>
       </div>
     </>
   );

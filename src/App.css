@@ -499,7 +499,7 @@ body {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 @media (min-width: 768px) {
@@ -618,6 +618,25 @@ body {
 }
 
 
+/* load button */
+.load-button-div {
+    display: flex;
+    justify-content: center;
+}
+
+.load-button {
+    margin: 1rem auto;
+    display: flex;
+    align-items: center;
+    padding: 1rem 3rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    border: 2px solid #fafafa;
+    background-color: transparent;
+    color: #fafafa;
+    font-weight: 400;
+    font-size: 1rem;
+}
 
 
 
@@ -679,6 +698,7 @@ body {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 1rem;
+  margin-bottom: 2rem;
 }
 
 @media (min-width: 768px) {

@@ -1,5 +1,6 @@
 import "../App.css";
 import { ArrowUpRight } from "lucide-react";
+import { useState } from "react";
 
 import Countries from "../assets/projects/MRLzwnZj.jpg";
 import IP from "../assets/projects/R815wQEh.jpg";
@@ -14,30 +15,28 @@ import Ping from "../assets/projects/TK_hWCaC.jpg";
 import Apparel from "../assets/projects/HdNlU8Gt.jpg";
 import Intro from "../assets/projects/mkTLs1ar.jpg";
 
-import FAQ from '../assets/projects/KC6L_qUP.jpg'
-import Article from '../assets/projects/I4oaBdw9.jpg'
-import Rating from '../assets/projects/XS_aApTP.jpg'
-import Social from '../assets/projects/ZXL-mQqr.jpg'
-import Results from '../assets/projects/_xdjk2sh.jpg'
-import Four from '../assets/projects/4MOmhPdW.jpg'
-import Order from '../assets/projects/m-h8D5b9.jpg'
-import Profile from '../assets/projects/xiTfgIL5.jpg'
-import Stats from '../assets/projects/ArBJT8Kb.jpg'
-import Price from '../assets/projects/9GaXqbaJ.jpg'
-import Huddle from '../assets/projects/XyD7FR5v.jpg'
-import Columns from '../assets/projects/yZZc3wac.jpg'
-import Product from '../assets/projects/BadPQjYR.jpg'
-import NFT from "../assets/projects/ny5l3Rcg.jpg"
-import QR from "../assets/projects/tt6ilPRM.jpg"
-
-
-
+import FAQ from "../assets/projects/KC6L_qUP.jpg";
+import Article from "../assets/projects/I4oaBdw9.jpg";
+import Rating from "../assets/projects/XS_aApTP.jpg";
+import Social from "../assets/projects/ZXL-mQqr.jpg";
+import Results from "../assets/projects/_xdjk2sh.jpg";
+import Four from "../assets/projects/4MOmhPdW.jpg";
+import Order from "../assets/projects/m-h8D5b9.jpg";
+import Profile from "../assets/projects/xiTfgIL5.jpg";
+import Stats from "../assets/projects/ArBJT8Kb.jpg";
+import Price from "../assets/projects/9GaXqbaJ.jpg";
+import Huddle from "../assets/projects/XyD7FR5v.jpg";
+import Columns from "../assets/projects/yZZc3wac.jpg";
+import Product from "../assets/projects/BadPQjYR.jpg";
+import NFT from "../assets/projects/ny5l3Rcg.jpg";
+import QR from "../assets/projects/tt6ilPRM.jpg";
 
 export default function Projects() {
   const projects = [
     {
       title: "REST Countries API web app",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       tags: ["React", "Vite", "CSS", "JSON"],
       image: Countries,
       repo: "https://github.com/Hamid997/REST-Countries-API-with-color-theme-switcher",
@@ -45,7 +44,8 @@ export default function Projects() {
     },
     {
       title: "IP Address Tracker",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       tags: ["React", "Axios", "Leaflet js", "Vite", "CSS"],
       image: IP,
       repo: "https://github.com/Hamid997/IP-Address-Tracker",
@@ -53,7 +53,8 @@ export default function Projects() {
     },
     {
       title: "URL shortening API landing page",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       tags: ["React", "Vite", "CSS"],
       image: Shortening,
       repo: "https://github.com/Hamid997/URL-shortening-API-landing-page",
@@ -61,7 +62,8 @@ export default function Projects() {
     },
     {
       title: "Advice generator app",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       tags: ["React", "Vite", "Axios", "CSS"],
       image: Advices,
       repo: "https://github.com/Hamid997/Advice-generator-app",
@@ -69,7 +71,8 @@ export default function Projects() {
     },
     {
       title: "Blogr landing page",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       tags: ["HTML", "CSS", "Javascript"],
       image: Blogr,
       repo: "https://github.com/Hamid997/Blogr-landing-page",
@@ -77,7 +80,8 @@ export default function Projects() {
     },
     {
       title: "Insure landing page",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       tags: ["HTML", "CSS", "Javascript"],
       image: Insure,
       repo: "https://github.com/Hamid997/Insure-landing-page",
@@ -85,7 +89,8 @@ export default function Projects() {
     },
     {
       title: "Sunnyside agency landing page",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       tags: ["HTML", "CSS", "Javascript"],
       image: Sunnyside,
       repo: "https://github.com/Hamid997/Sunnyside-agency-landing-page",
@@ -93,7 +98,8 @@ export default function Projects() {
     },
     {
       title: "Fylo landing page",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       tags: ["HTML", "CSS", "Javascript"],
       image: Fylo,
       repo: "https://github.com/Hamid997/Fylo-landing-page-with-two-column-layout",
@@ -101,7 +107,8 @@ export default function Projects() {
     },
     {
       title: "Clipboard landing page",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       tags: ["HTML", "CSS"],
       image: Clipboard,
       repo: "https://github.com/Hamid997/Clipboard-landing-page",
@@ -109,7 +116,8 @@ export default function Projects() {
     },
     {
       title: "Ping coming soon page",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       tags: ["HTML", "CSS"],
       image: Ping,
       repo: "https://github.com/Hamid997/Ping-single-column-coming-soon-page",
@@ -117,7 +125,8 @@ export default function Projects() {
     },
     {
       title: "Base Apparel coming soon page",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       tags: ["HTML", "CSS", "Javascript"],
       image: Apparel,
       repo: "https://github.com/Hamid997/Base-Apparel-coming-soon-page",
@@ -125,7 +134,8 @@ export default function Projects() {
     },
     {
       title: "Intro component with sign-up form",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       tags: ["HTML", "CSS", "Javascript"],
       image: Intro,
       repo: "https://github.com/Hamid997/Intro-component-with-sign-up-form",
@@ -133,7 +143,8 @@ export default function Projects() {
     },
     {
       title: "FAQ accordion card",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       tags: ["HTML", "CSS", "Javascript"],
       image: FAQ,
       repo: "https://github.com/Hamid997/FAQ-accordion-card",
@@ -141,7 +152,8 @@ export default function Projects() {
     },
     {
       title: "Article preview component",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       tags: ["HTML", "CSS", "Javascript"],
       image: Article,
       repo: "https://github.com/Hamid997/Article-preview-component",
@@ -149,7 +161,8 @@ export default function Projects() {
     },
     {
       title: "Interactive rating component",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       tags: ["HTML", "CSS", "Javascript"],
       image: Rating,
       repo: "https://github.com/Hamid997/Interactive-rating-component",
@@ -157,7 +170,8 @@ export default function Projects() {
     },
     {
       title: "Social proof section",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       tags: ["HTML", "CSS"],
       image: Social,
       repo: "https://github.com/Hamid997/Social-Proof-Section",
@@ -165,7 +179,8 @@ export default function Projects() {
     },
     {
       title: "Results summary component",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       tags: ["HTML", "CSS"],
       image: Results,
       repo: "https://github.com/Hamid997/Results-summary-component",
@@ -173,15 +188,17 @@ export default function Projects() {
     },
     {
       title: "Four card feature section",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       tags: ["HTML", "CSS"],
-      image: Four ,
+      image: Four,
       repo: "https://github.com/Hamid997/Four-card-feature-section",
       demo: "https://hamid997.github.io/Four-card-feature-section/",
     },
     {
       title: "Order summary component",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       tags: ["HTML", "CSS"],
       image: Order,
       repo: "https://github.com/Hamid997/Order-summary-component",
@@ -189,7 +206,8 @@ export default function Projects() {
     },
     {
       title: "Profile card component",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       tags: ["HTML", "CSS"],
       image: Profile,
       repo: "https://github.com/Hamid997/Profile-card-component",
@@ -197,7 +215,8 @@ export default function Projects() {
     },
     {
       title: "Stats preview card component",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       tags: ["HTML", "CSS"],
       image: Stats,
       repo: "https://github.com/Hamid997/Stats-preview-card-component",
@@ -205,7 +224,8 @@ export default function Projects() {
     },
     {
       title: "Single price grid component",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       tags: ["HTML", "CSS"],
       image: Price,
       repo: "https://github.com/Hamid997/Single-price-grid-component",
@@ -213,7 +233,8 @@ export default function Projects() {
     },
     {
       title: "Huddle landing page section",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       tags: ["HTML", "CSS"],
       image: Huddle,
       repo: "https://github.com/Hamid997/Huddle-landing-page-with-a-single-introductory-section",
@@ -221,7 +242,8 @@ export default function Projects() {
     },
     {
       title: "3-column preview card component",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       tags: ["HTML", "CSS"],
       image: Columns,
       repo: "https://github.com/Hamid997/3-column-preview-card-component",
@@ -229,7 +251,8 @@ export default function Projects() {
     },
     {
       title: "Product preview card component",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       tags: ["HTML", "CSS"],
       image: Product,
       repo: "https://github.com/Hamid997/Product-preview-card-component",
@@ -237,7 +260,8 @@ export default function Projects() {
     },
     {
       title: "NFT preview card component",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       tags: ["HTML", "CSS"],
       image: NFT,
       repo: "https://github.com/Hamid997/NFT-preview-card-component",
@@ -245,7 +269,8 @@ export default function Projects() {
     },
     {
       title: "QR code component",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       tags: ["HTML", "CSS"],
       image: QR,
       repo: "https://github.com/Hamid997/QR-code-component",
@@ -253,16 +278,28 @@ export default function Projects() {
     },
   ];
 
+  const [visibleItemCount, setVisibleItemCount] = useState(6);
+
+  const displayedData = projects.slice(0, visibleItemCount);
+
+  const handleLoadMore = () => {
+    if (visibleItemCount >= projects.length) {
+      setVisibleItemCount(6); // Show Less
+    } else {
+      setVisibleItemCount((prev) => prev + 6); // Load More
+    }
+  };
+
   return (
     <>
       <section id="Projects">
         <div className="projects-container">
           <div className="projects-header">
-            <h2 className="projects-title">Featured Projects</h2>
+            <h2 className="projects-title">Projects</h2>
           </div>
 
           <div className="projects-content">
-            {projects.map((project, idx) => (
+            {displayedData.map((project, idx) => (
               <div key={idx} className="project-card">
                 <div className="project-preview">
                   <img
@@ -292,6 +329,11 @@ export default function Projects() {
                 </div>
               </div>
             ))}
+          </div>
+          <div className="load-button-div">
+            <button onClick={handleLoadMore} className="load-button">
+              {visibleItemCount >= projects.length ? "Show Less" : "Load More"}
+            </button>
           </div>
         </div>
       </section>
