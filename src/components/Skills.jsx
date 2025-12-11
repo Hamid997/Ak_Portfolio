@@ -1,22 +1,27 @@
 import "../App.css";
-import { Code, Palette, Zap } from "lucide-react";
+import { Code, Palette, Zap, MapPinned } from "lucide-react";
 
 export default function Skills() {
   const skills = [
     {
       name: "Frontend Development",
       icon: Code,
-      items: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+      items: ["HTML / CSS", "JavaScript / jQuery", "JSON / AJAX", "React / Next.js", "Bootstrap / Tailwind CSS"],
     },
     {
       name: "UI/UX Design",
       icon: Palette,
-      items: ["Figma", "User Research", "Prototyping", "Design Systems"],
+      items: ["Figma", "Adobe XD", "Prototyping", "Design Systems"],
     },
     {
-      name: "Performance",
+      name: "Backend Development",
       icon: Zap,
-      items: ["Web Vitals", "Optimization", "Accessibility", "SEO"],
+      items: ["PHP / Wordpress", "SQL / MySQL", "Git / GitHub", "Node.js / Express.js / MongoDB", "Python / Django / Django REST", "Cloud Native App with IBM Cloud"],
+    },
+    {
+      name: "Geospatial Tools",
+      icon: MapPinned,
+      items: ["QGIS", "ArcGIS / ArcGIS Online", "Leaflet", "React-Leaflet"],
     },
   ];
 
