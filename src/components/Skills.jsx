@@ -1,28 +1,13 @@
 import "../App.css";
-import { Code, Palette, Zap, MapPinned } from "lucide-react";
 
 export default function Skills() {
   const skills = [
-    {
-      name: "Frontend Development",
-      icon: Code,
-      items: ["HTML / CSS", "JavaScript / jQuery", "JSON / AJAX", "React / Next.js", "Bootstrap / Tailwind CSS"],
-    },
-    {
-      name: "UI/UX Design",
-      icon: Palette,
-      items: ["Figma", "Adobe XD", "Prototyping", "Design Systems"],
-    },
-    {
-      name: "Backend Development",
-      icon: Zap,
-      items: ["PHP / Wordpress", "SQL / MySQL", "Git / GitHub", "Node.js / Express.js / MongoDB", "Python / Django / Django REST", "Cloud Native App with IBM Cloud"],
-    },
-    {
-      name: "Geospatial Tools",
-      icon: MapPinned,
-      items: ["QGIS", "ArcGIS / ArcGIS Online", "Leaflet", "React-Leaflet"],
-    },
+    "HTML", "CSS", "JavaScript", "jQuery", "JSON" ,
+    " AJAX", "Bootstrap" , "Tailwind CSS" , "React" , "Next.js", 
+    "Figma", "Adobe XD", "Git / GitHub", "PHP" , "Wordpress", "SQL" , "MySQL",  
+    "Node.js" , "Express.js" , "MongoDB", "Python" , "Django" , "Django REST", 
+    "Cloud Native App" , "IBM Cloud" , "QGIS", "ArcGIS" , 
+    "ArcGIS Online", "Leaflet", "React-Leaflet"
   ];
 
   return (
@@ -33,16 +18,7 @@ export default function Skills() {
           <div id="skills-block">
             {skills.map((skill, idx) => (
               <div key={idx} className="skill-card">
-                <skill.icon className="skill-icon" />
-                <h3 className="skill-name">{skill.name}</h3>
-                <div id="items">
-                  {skill.items.map((item, i) => (
-                    <div key={i} className="items-container">
-                      <div className="bullet"></div>
-                      <span className="item-name">{item}</span>
-                    </div>
-                  ))}
-                </div>
+                <p className="skill-name">{skill}</p>
               </div>
             ))}
           </div>
