@@ -8,21 +8,20 @@ export default function About() {
           <h2 className="about-title">About Me</h2>
           <div className="description-container">
             <p className="about-p">
-                I'm a passionate developer with over 5 years of experience
-              building modern web applications. My journey began with a love for
-              design, which naturally evolved into coding and bringing digital
-              experiences to life.
+              I’m a front-end developer focus in building modern, responsive web
+              applications using React, JavaScript, and modern front-end
+              tooling.
             </p>
             <p className="about-p">
-              I specialize in creating user-centered applications that combine
-              beautiful interfaces with robust functionality. My approach
-              focuses on performance, accessibility, and delivering exceptional
-              user experiences.
+              My background is a BSc in Earth Sciences, with strong foundations
+              in GIS (Trained in Coursera UCDavis and Toronto Specializations ),
+              and full-stack web development (Certified in Coursera with
+              professional certifications from IBM & Meta in software
+              development, cloud computing, backend, frontend, and DevOps).
             </p>
             <p className="about-p">
-              When I'm not coding, you'll find me exploring new technologies,
-              contributing to open-source projects, or sharing knowledge through
-              writing and mentoring.
+              When I'm not coding, you'll find me searching and exploring new
+              technologies. Open To Learn and Open To Work.
             </p>
           </div>
         </div>
