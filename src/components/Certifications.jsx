@@ -279,7 +279,7 @@ export default function Certifications() {
 
         <div className="load-button-div">
             <button onClick={handleLoadMore} className="load-button">
-              {visibleItemCount >= certifications.length ? "Show Less" : "Load More"}
+              {visibleItemCount >= certifications.length ? "Show Less" : "Show More"}
             </button>
           </div>
       </div>

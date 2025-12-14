@@ -36,7 +36,7 @@ export default function Projects() {
     {
       title: "REST Countries API web app",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "A searchable, filterable UI for exploring country data through the REST Countries API.",
       tags: ["React", "Vite", "CSS", "JSON"],
       image: Countries,
       repo: "https://github.com/Hamid997/REST-Countries-API-with-color-theme-switcher",
@@ -45,7 +45,7 @@ export default function Projects() {
     {
       title: "IP Address Tracker",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "A real-time map application that locates any IP address with dynamic map updates.",
       tags: ["React", "Axios", "Leaflet js", "Vite", "CSS"],
       image: IP,
       repo: "https://github.com/Hamid997/IP-Address-Tracker",
@@ -54,7 +54,7 @@ export default function Projects() {
     {
       title: "URL shortening API landing page",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "A fully responsive landing page with functional API-powered URL shortening.",
       tags: ["React", "Vite", "CSS"],
       image: Shortening,
       repo: "https://github.com/Hamid997/URL-shortening-API-landing-page",
@@ -63,7 +63,7 @@ export default function Projects() {
     {
       title: "Advice generator app",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "A small interactive card UI that fetches random advice from an API.",
       tags: ["React", "Vite", "Axios", "CSS"],
       image: Advices,
       repo: "https://github.com/Hamid997/Advice-generator-app",
@@ -72,7 +72,7 @@ export default function Projects() {
     {
       title: "Blogr landing page",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "A modern landing page designed with strong visual hierarchy and typography.",
       tags: ["HTML", "CSS", "Javascript"],
       image: Blogr,
       repo: "https://github.com/Hamid997/Blogr-landing-page",
@@ -81,7 +81,7 @@ export default function Projects() {
     {
       title: "Insure landing page",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "A multi-section landing page with a modular component structure.",
       tags: ["HTML", "CSS", "Javascript"],
       image: Insure,
       repo: "https://github.com/Hamid997/Insure-landing-page",
@@ -332,7 +332,7 @@ export default function Projects() {
           </div>
           <div className="load-button-div">
             <button onClick={handleLoadMore} className="load-button">
-              {visibleItemCount >= projects.length ? "Show Less" : "Load More"}
+              {visibleItemCount >= projects.length ? "Show Less" : "Show More"}
             </button>
           </div>
         </div>
