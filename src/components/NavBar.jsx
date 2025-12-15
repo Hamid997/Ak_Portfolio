@@ -3,64 +3,73 @@ import { useState } from "react";
 import { HashLink } from "react-router-hash-link";
 import { Menu, X } from "lucide-react";
 
+import Box from "@mui/material/Box";
+import Drawer from "@mui/material/Drawer";
+import Button from "@mui/material/Button";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemText from "@mui/material/ListItemText";
+
 function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
   const Navigation = ["About", "Skills", "Projects", "Educations", "Contact"];
+
+  const toggleDrawer = (state) => () => {
+    setOpen(state);
+  };
+
+  const DrawerList = (
+    <Box sx={{ width: 300 }} role="presentation" onClick={toggleDrawer(false)} className="navbar-nav-mobile  drawer-block">
+      <List>
+        {Navigation.map((item) => (
+          <ListItem key={item} disablePadding className="nav-item-mobile">
+            <HashLink
+              smooth
+              to={`/#${item}`}
+              className="nav-link"
+            >
+              <ListItemText primary={item} />
+            </HashLink>
+          </ListItem>
+        ))}
+      </List>
+    </Box>
+  );
 
   return (
     <nav className="navbar">
       <div className="navbar-container">
+        {/* Logo */}
         <div className="navbar-brand">
-          <HashLink to="/" className="portfolio-logo" end>
+          <HashLink to="/" className="portfolio-logo">
             {"<Ak />"}
           </HashLink>
         </div>
 
         {/* Desktop Navigation */}
         <ul className="navbar-nav">
-          {Navigation.map(
-            (item) => (
-              <li
-                key={item}
-                className="nav-item"
-              >
-                <HashLink smooth to={`/#${item}`} className="nav-link" end>
-                  {item}
-                </HashLink>
-              </li>
-            )
-          )}
+          {Navigation.map((item) => (
+            <li key={item} className="nav-item">
+              <HashLink smooth to={`/#${item}`} className="nav-link">
+                {item}
+              </HashLink>
+            </li>
+          ))}
         </ul>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Button */}
         <div className="mobile-menu-button-div">
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="mobile-menu-button"
-          >
-            {isMenuOpen ? <X size={32} /> : <Menu size={32} />}
-          </button>
+          <Button onClick={toggleDrawer(true)} className="mobile-menu-button">
+            {open ? <X size={32} /> : <Menu size={32} />}
+          </Button>
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      {isMenuOpen && (
-        <ul className="navbar-nav-mobile">
-          {Navigation.map(
-            (item) => (
-              <li
-                key={item}
-                className="nav-item-mobile"
-              >
-                <HashLink smooth to={`/#${item}`} className="nav-link" end>
-                  {item}
-                </HashLink>
-              </li>
-            )
-          )}
-        </ul>
-      )}
+      {/* MUI Drawer */}
+      <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>
+        {DrawerList}
+      </Drawer>
     </nav>
   );
 }
