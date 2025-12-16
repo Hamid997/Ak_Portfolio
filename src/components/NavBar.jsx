@@ -16,7 +16,9 @@ function Navbar() {
 
   const Navigation = ["About", "Skills", "Projects", "Educations", "Contact"];
 
-  const toggleDrawer = (state) => () => {  setOpen(state);  };
+  const toggleDrawer = (state) => () => {
+    setOpen(state);
+  };
 
   /* auto-close drawer when resizing to desktop */
   useEffect(() => {
@@ -103,6 +105,12 @@ function Navbar() {
             className="mobile-menu-button"
             disableRipple
             disableFocusRipple
+            disableTouchRipple
+            sx={{
+              "&:hover": {
+                backgroundColor: "transparent",
+              },
+            }}
           >
             <Menu size={32} color="white" />
           </Button>
