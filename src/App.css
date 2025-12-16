@@ -97,9 +97,7 @@ body {
 
 .mobile-menu-button {
   padding: 0.5rem;
-  color: #f4f4f5;
   background-color: transparent;
-  cursor: pointer;
   border: none;
 }
 
@@ -133,8 +131,19 @@ body {
   color: #52525b; /* text-zinc-600 */
 }
 
+.nav-link-mobile {
+  text-decoration: none;
+  padding: 0.75rem 0;
+  display: block;
+  width: 100%;
+  color: #a4a4ad;
+  font-weight: bold;
+  text-align: center;
+}
 
-
+.nav-link-mobile:hover {
+  color: #ffffff;
+}
 
 
 
@@ -308,12 +317,6 @@ body {
   .firstBlock{
     width: 100%;
   }
-}
-
-
-
-.drawer-block{
-  background-color: #27272a;
 }
 
 
