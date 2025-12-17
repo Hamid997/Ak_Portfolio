@@ -1,7 +1,7 @@
 import "../App.css";
 import { useEffect, useState } from "react";
 import { HashLink } from "react-router-hash-link";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Github, Linkedin, Mail } from "lucide-react";
 
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
@@ -16,24 +16,29 @@ function Navbar() {
 
   const Navigation = ["About", "Skills", "Projects", "Educations", "Contact"];
 
-  const toggleDrawer = (state) => () => {
-    setOpen(state);
-  };
+  const toggleDrawer = (state) => () => setOpen(state);
 
-  /* auto-close drawer when resizing to desktop */
+  /* ✅ Auto-close drawer on desktop resize */
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 701 && open) {
         setOpen(false);
       }
     };
-
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, [open]);
 
   const DrawerList = (
-    <Box sx={{ width: 300 }} role="presentation">
+    <Box
+      role="presentation"
+      sx={{
+        width: 300,
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
+      }}
+    >
       {/* Drawer Header */}
       <Box
         sx={{
@@ -43,37 +48,76 @@ function Navbar() {
         }}
       >
         <IconButton onClick={toggleDrawer(false)}>
-          <X color="white" size={28} />
+          <X size={28} color="white" />
         </IconButton>
       </Box>
 
-      {/* Drawer List */}
-      <List>
-        {Navigation.map((item) => (
-          <ListItem
-            key={item}
-            disablePadding
-            sx={{
-              justifyContent: "center",
-              textAlign: "center",
-              transition: "0.2s",
+      {/* Navigation (takes space) */}
+      <Box sx={{ flexGrow: 1 }}>
+        <List>
+          {Navigation.map((item) => (
+            <ListItem
+              key={item}
+              disablePadding
+              sx={{
+                justifyContent: "center",
+                textAlign: "center",
+                transition: "0.2s",
 
-              "&:hover": {
-                backgroundColor: "#3b3b44",
-              },
-            }}
-          >
-            <HashLink
-              smooth
-              to={`/#${item}`}
-              className="nav-link-mobile"
-              onClick={() => setOpen(false)} // ✅ close after click
+                "&:hover": {
+                  backgroundColor: "#3b3b44",
+                },
+              }}
             >
-              <ListItemText primary={item} />
-            </HashLink>
-          </ListItem>
-        ))}
-      </List>
+              <HashLink
+                smooth
+                to={`/#${item}`}
+                className="nav-link-mobile"
+                onClick={() => setOpen(false)}
+              >
+                <ListItemText primary={item} />
+              </HashLink>
+            </ListItem>
+          ))}
+        </List>
+      </Box>
+
+      {/* Social Links (anchored bottom) */}
+      <Box
+        className="links-block"
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          gap: "1.5rem",
+          padding: "1.25rem",
+          borderTop: "1px solid #3f3f46",
+        }}
+      >
+        <a
+          href="https://github.com/yourusername"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="social-links"
+        >
+          <Github size={25} />
+        </a>
+
+        <a
+          href="https://linkedin.com/in/yourusername"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="social-links"
+        >
+          <Linkedin size={25} />
+        </a>
+
+        <a
+          href="mailto:youremail@example.com"
+          className="social-links"
+        >
+          <Mail size={25} />
+        </a>
+      </Box>
     </Box>
   );
 
@@ -117,7 +161,7 @@ function Navbar() {
         </div>
       </div>
 
-      {/* MUI Drawer */}
+      {/* Drawer */}
       <Drawer
         anchor="right"
         open={open}
@@ -125,7 +169,7 @@ function Navbar() {
         BackdropProps={{
           sx: {
             backdropFilter: "blur(2px)",
-            backgroundColor: "rgba(0, 0, 0, 0.35)",
+            backgroundColor: "rgba(0,0,0,0.35)",
           },
         }}
         PaperProps={{
