@@ -17,10 +17,25 @@ import Yonsei from '../assets/learnings/yonsei.png'
 import Australia from '../assets/learnings/Australia.png'
 import NASA from '../assets/learnings/nasa.png'
 import Google from '../assets/learnings/google.png'
+import Kaggle from '../assets/learnings/kaggle.png'
 
 export default function Certifications() {
 
   const certifications = [
+    {
+      name: "5-Day AI Agents Intensive Course",
+      issuer: "Kaggle - Google",
+      year: "2025",
+      link: "#",
+      img: Kaggle
+    },
+    {
+      name: "5-Day Gen AI Intensive Course",
+      issuer: "Kaggle - Google",
+      year: "2025",
+      link: "#",
+      img: Kaggle
+    },
     {
       name: "Machine Learning Specialization",
       issuer: "Stanford University & DeepLearning.AI - Coursera",
@@ -148,6 +163,13 @@ export default function Certifications() {
       img: Michigan
     },
     {
+      name: "Hyperspectral Data for Land and Coastal Systems",
+      issuer: "NASA - ARSET",
+      year: "2025",
+      link: "#",
+      img: NASA,
+    }, 
+    {
       name: "Fundamentals of Remote Sensing",
       issuer: "NASA - ARSET",
       year: "2025",
@@ -233,13 +255,13 @@ export default function Certifications() {
     }, 
   ]
 
-  const [visibleItemCount, setVisibleItemCount] = useState(8);
+  const [visibleItemCount, setVisibleItemCount] = useState(10);
 
   const displayedDataCertifications = certifications.slice(0, visibleItemCount);
 
   const handleLoadMore = () => {
     if (visibleItemCount >= certifications.length) {
-      setVisibleItemCount(8); // Show Less
+      setVisibleItemCount(10); // Show Less
     } else {
       setVisibleItemCount((prev) => prev + 4); // Load More
     }
