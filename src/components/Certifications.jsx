@@ -68,7 +68,7 @@ export default function Certifications() {
       name: "IBM Full Stack Software Developer Professional Certificate",
       issuer: "IBM - Coursera",
       year: "2023",
-      link: "../assets/Documents/IBM-Full-Stack.pdf",
+      link: "https://github.com/Hamid997/Portfolio-v1/blob/main/src/assets/Documents/IBM-Full-Stack.pdf",
       img: IBM
     },
     {
@@ -250,7 +250,7 @@ export default function Certifications() {
       name: "The Fundamentals of Digital Marketing",
       issuer: "Google Digital Garage",
       year: "2019",
-      link: "../assets/Documents/google-eMarketing.pdf",
+      link: "https://github.com/Hamid997/Portfolio-v1/blob/main/src/assets/Documents/google-eMarketing.pdf",
       img: Google,
     }, 
   ]
