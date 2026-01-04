@@ -263,7 +263,7 @@ export default function Certifications() {
     if (visibleItemCount >= certifications.length) {
       setVisibleItemCount(10); // Show Less
     } else {
-      setVisibleItemCount((prev) => prev + 4); // Load More
+      setVisibleItemCount((prev) => prev + 6); // Load More
     }
   };
 
