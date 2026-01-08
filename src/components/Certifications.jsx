@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import Meta from '../assets/learnings/meta.png'
 import IBM from '../assets/learnings/ibm.png'
-import Michigan from '../assets/learnings/michigan.png'
+import michigan from '../assets/learnings/michigan.png'
 import HKUST from '../assets/learnings/HKUST.png'
 import Stanford from '../assets/learnings/Stanford.png'
 import LinkedIn from '../assets/learnings/linkedin.png'
@@ -153,14 +153,14 @@ export default function Certifications() {
       issuer: "University of Michigan - Coursera",
       year: "2020 - 2022",
       link: "https://www.coursera.org/account/accomplishments/specialization/XN8B3DCCPLUB",
-      img: Michigan
+      img: michigan
     },
     {
       name: "Web Design for Everybody Specialization",
       issuer: "University of Michigan - Coursera",
       year: "2019 - 2022",
       link: "https://www.coursera.org/account/accomplishments/specialization/LQRAAA9XU5LB",
-      img: Michigan
+      img: michigan
     },
     {
       name: "Hyperspectral Data for Land and Coastal Systems",
