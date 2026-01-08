@@ -17,7 +17,7 @@ export default function Hero() {
             </div>
             <h1 className="heading">
               Hello, I'm a<br />
-              <TypewriterEffect text="Creative Developer" delay={150} />
+              <TypewriterEffect text="Abdelhamid Birouk" delay={150} />
             </h1>
             <p className="text">
               I'm a front-end developer and designer focused on creating

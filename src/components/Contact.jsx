@@ -1,57 +1,87 @@
-import "../App.css";
+import React, { useState } from "react";
 import { Github, Linkedin, Mail, Youtube, Send } from "lucide-react";
-import { useForm } from "react-hook-form";
+import "../App.css";
 
 export default function Contact() {
-  // --- React Hook Form Setup ---
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
+  const [errors, setErrors] = useState({});
 
-  const RECIPIENT_EMAIL = "hello@example.com"; // Use the email from your links!
+  const RECIPIENT_EMAIL = "hamid.birouk0597@gmail.com";
 
-  // 1. Function that executes when validation passes
-  const onSubmit = (data) => {
-    // 2. Encode form data for the mailto link
-    const subject = encodeURIComponent(`New Inquiry from ${data.name}`);
-    const body = encodeURIComponent(
-      `
-        Sender Name: ${data.name}
-        Sender Email: ${data.email}
-        ---------------------------
-        Message:
-        ${data.message}
-        `
-    );
+  const validateForm = () => {
+    const newErrors = {};
 
-    // 3. Construct and execute the mailto URL
-    const mailtoUrl = `mailto:${RECIPIENT_EMAIL}?subject=${subject}&body=${body}`;
-    window.location.href = mailtoUrl;
+    if (!formData.name) {
+      newErrors.name = "Name is required";
+    } else if (formData.name.length < 8) {
+      newErrors.name = "Please enter at least 8 characters";
+    }
+
+    if (!formData.email) {
+      newErrors.email = "Email is required";
+    } else if (!/^\S+@\S+$/i.test(formData.email)) {
+      newErrors.email = "Invalid email address";
+    }
+
+    if (!formData.message) {
+      newErrors.message = "A message is required";
+    } else if (formData.message.length < 20) {
+      newErrors.message = "Please enter at least 20 characters";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
   };
-  // ---------------------------------
+
+  const handleSubmit = () => {
+    if (validateForm()) {
+      const subject = encodeURIComponent(`New Inquiry from ${formData.name}`);
+      const body = encodeURIComponent(
+        `Sender Name: ${formData.name}\nSender Email: ${formData.email}\n---------------------------\nMessage:\n${formData.message}`
+      );
+
+      const mailtoUrl = `mailto:${RECIPIENT_EMAIL}?subject=${subject}&body=${body}`;
+      window.location.href = mailtoUrl;
+      
+      setTimeout(() => {
+        setFormData({ name: "", email: "", message: "" });
+        setErrors({});
+      }, 1000);
+    }
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+    if (errors[name]) {
+      setErrors(prev => ({ ...prev, [name]: "" }));
+    }
+  };
 
   const ContactData = [
     {
       name: "Email",
       icon: Mail,
-      link: "hello@example.com",
+      link: "mailto:hamid.birouk0597@gmail.com",
     },
     {
       name: "Github",
       icon: Github,
-      link: "github.com/yourusername",
+      link: "https://github.com/Hamid997",
     },
     {
       name: "LinkedIn",
       icon: Linkedin,
-      link: "linkedin.com/in/yourprofile",
+      link: "https://www.linkedin.com/in/abdelhamid-birouk/",
     },
     {
       name: "Youtube",
       icon: Youtube,
-      link: "youtube.com/profile",
+      link: "https://www.youtube.com/@CodingWithMido",
     },
   ];
 
@@ -67,42 +97,44 @@ export default function Contact() {
           <div className="contact-info">
             {ContactData.map((cont, i) => (
               <div key={i} className="contact-card-container">
-                <div className="contact-card">
-                  <div className="contact-icon-div">
-                    <cont.icon className="contact-icon" />
+                <a 
+                  href={cont.link}
+                  target={cont.name !== "Email" ? "_blank" : undefined}
+                  rel={cont.name !== "Email" ? "noopener noreferrer" : undefined}
+                  style={{ textDecoration: 'none', color: 'inherit' }}
+                >
+                  <div className="contact-card">
+                    <div className="contact-icon-div">
+                      <cont.icon className="contact-icon" />
+                    </div>
+                    <div>
+                      <h3 className="contact-name">{cont.name}</h3>
+                      <span className="contact-link">
+                        Click to connect
+                      </span>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="contact-name">{cont.name}</h3>
-                    <a href="" className="contact-link">
-                      {cont.link}
-                    </a>
-                  </div>
-                </div>
+                </a>
               </div>
             ))}
           </div>
 
-          <form className="contact-form" onSubmit={handleSubmit(onSubmit)}>
+          <div className="contact-form">
             <h3 className="form-title">Send a Message</h3>
             <div className="form-container">
               <div>
                 <label className="form-label" htmlFor="name">Name</label>
                 <input
                   id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   className="input-form"
                   placeholder="Your name"
                   type="text"
-                  // RHF registration with required rule
-                  {...register("name", {
-                    required: "Name is required",
-                    minLength: {
-                      value: 8, // Minimum 8 characters
-                      message: "Please enter at least 8 characters",
-                    },
-                  })}
                 />
                 {errors.name && (
-                  <p className="form-error">{errors.name.message}</p>
+                  <p className="form-error">{errors.name}</p>
                 )}
               </div>
 
@@ -110,19 +142,15 @@ export default function Contact() {
                 <label className="form-label" htmlFor="email">Email</label>
                 <input
                   id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   className="input-form"
                   placeholder="your.email@example.com"
                   type="email"
-                  {...register("email", {
-                    required: "Email is required",
-                    pattern: {
-                      value: /^\S+@\S+$/i,
-                      message: "Invalid email address",
-                    },
-                  })}
                 />
                 {errors.email && (
-                  <p className="form-error">{errors.email.message}</p>
+                  <p className="form-error">{errors.email}</p>
                 )}
               </div>
 
@@ -130,28 +158,28 @@ export default function Contact() {
                 <label className="form-label" htmlFor="message">Message</label>
                 <textarea
                   id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   rows={6}
                   className="input-form"
                   placeholder="Tell me about your project..."
-                  {...register("message", {
-                    required: "A message is required",
-                    minLength: {
-                      value: 20, // Minimum 10 characters
-                      message: "Please enter at least 20 characters",
-                    },
-                  })}
                 ></textarea>
                 {errors.message && (
-                  <p className="form-error">{errors.message.message}</p>
+                  <p className="form-error">{errors.message}</p>
                 )}
               </div>
 
-              <button className="form-button" type="submit">
+              <button 
+                className="form-button" 
+                type="button"
+                onClick={handleSubmit}
+              >
                 <Send size={18} />
                 Send Message
               </button>
             </div>
-          </form>
+          </div>
         </div>
       </div>
     </section>

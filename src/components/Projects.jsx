@@ -30,9 +30,19 @@ import Columns from "../assets/projects/yZZc3wac.jpg";
 import Product from "../assets/projects/BadPQjYR.jpg";
 import NFT from "../assets/projects/ny5l3Rcg.jpg";
 import QR from "../assets/projects/tt6ilPRM.jpg";
+import Wheather from "../assets/projects/sc2r5enn9.png";
 
 export default function Projects() {
   const projects = [
+    {
+      title: "Wheather API web app (not completed)",
+      description:
+        "A modern weather app display real-time weather data, hourly and daily forecasts using the Open-Meteo API.",
+      tags: ["React", "Vite", "CSS", "React-Bootstrap"],
+      image: Wheather,
+      repo: "https://github.com/Hamid997/Weather-Web-App",
+      demo: "https://weather-web-app-lovat-phi.vercel.app/",
+    },
     {
       title: "REST Countries API web app",
       description:
