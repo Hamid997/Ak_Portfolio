@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser"; // Import EmailJS
 import { Github, Linkedin, Mail, Youtube, Send } from "lucide-react";
 import "../App.css";
 
@@ -6,60 +7,52 @@ export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    message: ""
+    message: "",
   });
   const [errors, setErrors] = useState({});
-
-  const RECIPIENT_EMAIL = "hamid.birouk0597@gmail.com";
+  const [isSending, setIsSending] = useState(false); // Added loading state
 
   const validateForm = () => {
     const newErrors = {};
-
-    if (!formData.name) {
-      newErrors.name = "Name is required";
-    } else if (formData.name.length < 8) {
-      newErrors.name = "Please enter at least 8 characters";
-    }
-
-    if (!formData.email) {
-      newErrors.email = "Email is required";
-    } else if (!/^\S+@\S+$/i.test(formData.email)) {
-      newErrors.email = "Invalid email address";
-    }
-
-    if (!formData.message) {
-      newErrors.message = "A message is required";
-    } else if (formData.message.length < 20) {
-      newErrors.message = "Please enter at least 20 characters";
-    }
-
+    if (!formData.name || formData.name.length < 8)
+      newErrors.name = "Name must be at least 8 characters";
+    if (!formData.email || !/^\S+@\S+$/i.test(formData.email))
+      newErrors.email = "Invalid email";
+    if (!formData.message || formData.message.length < 20)
+      newErrors.message = "Message must be at least 20 characters";
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     if (validateForm()) {
-      const subject = encodeURIComponent(`New Inquiry from ${formData.name}`);
-      const body = encodeURIComponent(
-        `Sender Name: ${formData.name}\nSender Email: ${formData.email}\n---------------------------\nMessage:\n${formData.message}`
-      );
-
-      const mailtoUrl = `mailto:${RECIPIENT_EMAIL}?subject=${subject}&body=${body}`;
-      window.location.href = mailtoUrl;
-      
-      setTimeout(() => {
+      setIsSending(true);
+      try {
+        await emailjs.send(
+          import.meta.env.VITE_EMAILJS_SERVICE_ID,
+          import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+          {
+            from_name: formData.name,
+            from_email: formData.email,
+            message: formData.message,
+          },
+          import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+        );
+        alert("Message sent successfully!");
         setFormData({ name: "", email: "", message: "" });
-        setErrors({});
-      }, 1000);
+      } catch (error) {
+        console.error("EmailJS Error details:", error);
+        alert(`Failed to send: ${error.text || "Check console for details"}`);
+      } finally {
+        setIsSending(false);
+      }
     }
   };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-    if (errors[name]) {
-      setErrors(prev => ({ ...prev, [name]: "" }));
-    }
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const ContactData = [
@@ -97,11 +90,13 @@ export default function Contact() {
           <div className="contact-info">
             {ContactData.map((cont, i) => (
               <div key={i} className="contact-card-container">
-                <a 
+                <a
                   href={cont.link}
                   target={cont.name !== "Email" ? "_blank" : undefined}
-                  rel={cont.name !== "Email" ? "noopener noreferrer" : undefined}
-                  style={{ textDecoration: 'none', color: 'inherit' }}
+                  rel={
+                    cont.name !== "Email" ? "noopener noreferrer" : undefined
+                  }
+                  style={{ textDecoration: "none", color: "inherit" }}
                 >
                   <div className="contact-card">
                     <div className="contact-icon-div">
@@ -109,9 +104,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h3 className="contact-name">{cont.name}</h3>
-                      <span className="contact-link">
-                        Click to connect
-                      </span>
+                      <span className="contact-link">Click to connect</span>
                     </div>
                   </div>
                 </a>
@@ -119,43 +112,41 @@ export default function Contact() {
             ))}
           </div>
 
-          <div className="contact-form">
+          <form className="contact-form" onSubmit={handleSubmit}>
             <h3 className="form-title">Send a Message</h3>
             <div className="form-container">
               <div>
-                <label className="form-label" htmlFor="name">Name</label>
+                <label className="form-label" htmlFor="name">
+                  Name
+                </label>
                 <input
                   id="name"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
                   className="input-form"
-                  placeholder="Your name"
                   type="text"
                 />
-                {errors.name && (
-                  <p className="form-error">{errors.name}</p>
-                )}
+                {errors.name && <p className="form-error">{errors.name}</p>}
               </div>
-
               <div>
-                <label className="form-label" htmlFor="email">Email</label>
+                <label className="form-label" htmlFor="email">
+                  Email
+                </label>
                 <input
                   id="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
                   className="input-form"
-                  placeholder="your.email@example.com"
                   type="email"
                 />
-                {errors.email && (
-                  <p className="form-error">{errors.email}</p>
-                )}
+                {errors.email && <p className="form-error">{errors.email}</p>}
               </div>
-
               <div>
-                <label className="form-label" htmlFor="message">Message</label>
+                <label className="form-label" htmlFor="message">
+                  Message
+                </label>
                 <textarea
                   id="message"
                   name="message"
@@ -163,23 +154,21 @@ export default function Contact() {
                   onChange={handleChange}
                   rows={6}
                   className="input-form"
-                  placeholder="Tell me about your project..."
                 ></textarea>
                 {errors.message && (
                   <p className="form-error">{errors.message}</p>
                 )}
               </div>
-
-              <button 
-                className="form-button" 
-                type="button"
-                onClick={handleSubmit}
+              <button
+                className="form-button"
+                type="submit"
+                disabled={isSending}
               >
                 <Send size={18} />
-                Send Message
+                {isSending ? "Sending..." : "Send Message"}
               </button>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </section>
