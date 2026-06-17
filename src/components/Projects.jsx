@@ -31,11 +31,21 @@ import Product from "../assets/projects/BadPQjYR.jpg";
 import NFT from "../assets/projects/ny5l3Rcg.jpg";
 import QR from "../assets/projects/tt6ilPRM.jpg";
 import Wheather from "../assets/projects/sc2r5enn9.png";
+import Portfolio from "../assets/projects/pr2t5f8olio.png";
 
 export default function Projects() {
   const projects = [
     {
-      title: "Wheather API web app (not completed)",
+      title: "AK Portfolio web app",
+      description:
+        "A modern and simple portfolio web app display projects & Skills for Junior Front-End developer.",
+      tags: ["React", "Vite", "CSS", "React-Bootstrap", "Email.js"],
+      image: Portfolio,
+      repo: "https://github.com/Hamid997/Ak_Portfolio",
+      demo: "https://ak-portfolio-delta.vercel.app/",
+    },
+    {
+      title: "Wheather API web app",
       description:
         "A modern weather app display real-time weather data, hourly and daily forecasts using the Open-Meteo API.",
       tags: ["React", "Vite", "CSS", "React-Bootstrap"],
