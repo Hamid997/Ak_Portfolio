@@ -2,6 +2,9 @@ import "../App.css";
 import { ArrowUpRight } from "lucide-react";
 import { useState } from "react";
 
+import SalesIQ from "../assets/projects/Sal2esI9q.png";
+import Portfolio from "../assets/projects/pr2t5f8olio.png";
+import Wheather from "../assets/projects/sc2r5enn9.png";
 import Countries from "../assets/projects/MRLzwnZj.jpg";
 import IP from "../assets/projects/R815wQEh.jpg";
 import Shortening from "../assets/projects/Pyu_3ou-.jpg";
@@ -30,11 +33,18 @@ import Columns from "../assets/projects/yZZc3wac.jpg";
 import Product from "../assets/projects/BadPQjYR.jpg";
 import NFT from "../assets/projects/ny5l3Rcg.jpg";
 import QR from "../assets/projects/tt6ilPRM.jpg";
-import Wheather from "../assets/projects/sc2r5enn9.png";
-import Portfolio from "../assets/projects/pr2t5f8olio.png";
 
 export default function Projects() {
   const projects = [
+    {
+      title: "SalesIQ Dashboard",
+      description:
+        "A simple modern sales analytics dashboard that visualizes sales performance using interactive charts, KPI cards, Transactions table, and CSV export.",
+      tags: ["Next.js", "TypeScript", "Tailwind CSS", "Recharts", "Faker.js", "PapaParse"],
+      image: SalesIQ,
+      repo: "https://github.com/Hamid997/SalesIQ-Dashboard",
+      demo: "https://sales-iq-dashboard-ivory.vercel.app/",
+    },
     {
       title: "AK Portfolio web app",
       description:
