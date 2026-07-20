@@ -2,6 +2,7 @@ import "../App.css";
 import { ArrowUpRight } from "lucide-react";
 import { useState } from "react";
 
+import Issuehub from "../assets/projects/Is87ssue9nhub.png"
 import SalesIQ from "../assets/projects/Sal2esI9q.png";
 import Portfolio from "../assets/projects/pr2t5f8olio.png";
 import Wheather from "../assets/projects/sc2r5enn9.png";
@@ -36,6 +37,25 @@ import QR from "../assets/projects/tt6ilPRM.jpg";
 
 export default function Projects() {
   const projects = [
+    {
+      title: "IssueHub",
+      description:
+    "A modern issue tracking application featuring secure authentication, profile management, Cloudinary avatar uploads, issue management, filtering, search, and responsive UI.",
+      tags: [
+        "React",
+        "Vite",
+        "FastAPI",
+        "Python",
+        "SQLAlchemy",
+        "MySQL",
+        "JWT",
+        "Cloudinary",
+        "CSS",
+      ],
+      image: Issuehub,
+      repo: "https://github.com/your-username/IssueHub",
+      demo: "https://your-app.up.railway.app/",
+    },
     {
       title: "SalesIQ Dashboard",
       description:
