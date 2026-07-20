@@ -40,21 +40,11 @@ export default function Projects() {
     {
       title: "IssueHub",
       description:
-    "A modern issue tracking application featuring secure authentication, profile management, Cloudinary avatar uploads, issue management, filtering, search, and responsive UI.",
-      tags: [
-        "React",
-        "Vite",
-        "FastAPI",
-        "Python",
-        "SQLAlchemy",
-        "MySQL",
-        "JWT",
-        "Cloudinary",
-        "CSS",
-      ],
+        "A modern full-stack issue tracker with authentication, Cloudinary storage, and REST APIs.",
+      tags: ["React","FastAPI","Python","SQLAlchemy","MySQL","JWT","Cloudinary","CSS","Railway"],
       image: Issuehub,
-      repo: "https://github.com/your-username/IssueHub",
-      demo: "https://your-app.up.railway.app/",
+      repo: "https://github.com/Hamid997/IssueHub",
+      demo: "https://issuehub-seven.vercel.app/",
     },
     {
       title: "SalesIQ Dashboard",
